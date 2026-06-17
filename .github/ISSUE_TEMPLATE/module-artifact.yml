@@ -1,0 +1,42 @@
+name: Module artifact
+description: Track a module artifact for the GLOW Accessibility Champion Lab
+title: "[Module X]: "
+labels: ["human-review"]
+body:
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - "Module 1: AI Foundations"
+        - "Module 2: Generative AI"
+        - "Module 3: AI for Productivity"
+        - "Module 4: Critical Thinking About AI"
+        - "Module 5: AI Governance"
+        - "Module 6: AI Campus Champion Initiative"
+    validations:
+      required: true
+  - type: textarea
+    id: artifact
+    attributes:
+      label: Artifact
+      description: Which file or deliverable does this issue track?
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What does this artifact need to contain or accomplish?
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Completion checklist
+      options:
+        - label: Draft complete
+        - label: Human review performed
+        - label: Privacy check passed
+        - label: Committed and pushed
+        - label: Wiki page updated if applicable

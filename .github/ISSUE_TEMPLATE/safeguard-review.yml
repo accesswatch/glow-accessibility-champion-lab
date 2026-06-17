@@ -1,0 +1,43 @@
+name: Safeguard review
+description: Request or document a human safeguard review before publishing or reusing content
+title: "[Safeguard Review]: "
+labels: ["human-review", "privacy-review"]
+body:
+  - type: textarea
+    id: content
+    attributes:
+      label: Content being reviewed
+      description: Which file, workflow, or artifact is under review?
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: No student, employee, or accommodation information present
+        - label: No medical, legal, financial, or HR information present
+        - label: All examples are public, fictional, or sanitized
+  - type: checkboxes
+    id: accuracy
+    attributes:
+      label: Accuracy check
+      options:
+        - label: WCAG claims verified against W3C/WAI documentation
+        - label: Legal claims reviewed by qualified reviewer
+        - label: Policy claims aligned with institutional policy
+        - label: Assistive technology behavior verified by current testing
+  - type: checkboxes
+    id: bias
+    attributes:
+      label: Bias and fairness check
+      options:
+        - label: Disability language is respectful and current
+        - label: Output does not treat disabled people as a monolith
+        - label: Multiple disability experiences considered where relevant
+        - label: Automated checking is not presented as sufficient
+  - type: textarea
+    id: notes
+    attributes:
+      label: Review notes
+      description: Document what was found and what was corrected.

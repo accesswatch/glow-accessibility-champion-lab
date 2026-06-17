@@ -1,0 +1,8 @@
+{
+  "editor.wordWrap": "on",
+  "editor.accessibilitySupport": "on",
+  "markdown.validate.enabled": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "terminal.integrated.defaultProfile.windows": "PowerShell"
+}

@@ -1,0 +1,11 @@
+# Local/private material
+*.local.md
+private/
+*.docx
+*.pdf
+*.xlsx
+*.pptx
+*.zip
+.DS_Store
+Thumbs.db
+dist/

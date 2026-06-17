@@ -1,0 +1,77 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Weekly Closeout: Module 1",
+      "type": "shell",
+      "command": "pwsh",
+      "args": [".\\tools\\weekly-closeout.ps1", "-ModuleFolder", ".\\01-module-ai-foundations"],
+      "group": "build",
+      "presentation": { "reveal": "always" }
+    },
+    {
+      "label": "Weekly Closeout: Module 2",
+      "type": "shell",
+      "command": "pwsh",
+      "args": [".\\tools\\weekly-closeout.ps1", "-ModuleFolder", ".\\02-module-generative-ai"],
+      "group": "build",
+      "presentation": { "reveal": "always" }
+    },
+    {
+      "label": "Weekly Closeout: Module 3",
+      "type": "shell",
+      "command": "pwsh",
+      "args": [".\\tools\\weekly-closeout.ps1", "-ModuleFolder", ".\\03-module-ai-productivity"],
+      "group": "build",
+      "presentation": { "reveal": "always" }
+    },
+    {
+      "label": "Weekly Closeout: Module 4",
+      "type": "shell",
+      "command": "pwsh",
+      "args": [".\\tools\\weekly-closeout.ps1", "-ModuleFolder", ".\\04-module-critical-thinking"],
+      "group": "build",
+      "presentation": { "reveal": "always" }
+    },
+    {
+      "label": "Weekly Closeout: Module 5",
+      "type": "shell",
+      "command": "pwsh",
+      "args": [".\\tools\\weekly-closeout.ps1", "-ModuleFolder", ".\\05-module-governance"],
+      "group": "build",
+      "presentation": { "reveal": "always" }
+    },
+    {
+      "label": "Weekly Closeout: Module 6",
+      "type": "shell",
+      "command": "pwsh",
+      "args": [".\\tools\\weekly-closeout.ps1", "-ModuleFolder", ".\\06-module-campus-champion"],
+      "group": "build",
+      "presentation": { "reveal": "always" }
+    },
+    {
+      "label": "Sync Wiki Source",
+      "type": "shell",
+      "command": "pwsh",
+      "args": [".\\tools\\sync-wiki-source.ps1"],
+      "group": "build",
+      "presentation": { "reveal": "always" }
+    },
+    {
+      "label": "Publish Wiki",
+      "type": "shell",
+      "command": "pwsh",
+      "args": [".\\tools\\publish-wiki.ps1"],
+      "group": "build",
+      "presentation": { "reveal": "always" }
+    },
+    {
+      "label": "Package Capstone",
+      "type": "shell",
+      "command": "pwsh",
+      "args": [".\\tools\\package-capstone.ps1"],
+      "group": "build",
+      "presentation": { "reveal": "always" }
+    }
+  ]
+}
