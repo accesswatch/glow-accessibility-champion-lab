@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ai-accessibility-glossary</title>
+  <style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+white-space: pre-wrap;
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">ai-accessibility-glossary</h1>
+</header>
+<h1 id="ai-and-accessibility-glossary">AI and Accessibility
+Glossary</h1>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Term</th>
+<th>Plain-language definition</th>
+<th>Accessibility relevance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artificial Intelligence</td>
+<td>Software designed to perform tasks that appear to require reasoning,
+prediction, classification, or generation.</td>
+<td>AI can help organize accessibility guidance, but it cannot own
+accessibility responsibility.</td>
+</tr>
+<tr>
+<td>Machine Learning</td>
+<td>A subset of AI where systems learn patterns from data rather than
+following only hand-written rules.</td>
+<td>Accessibility outputs may reflect patterns in training data,
+including biased or incomplete disability assumptions.</td>
+</tr>
+<tr>
+<td>Deep Learning</td>
+<td>A subset of machine learning using multi-layer neural networks.</td>
+<td>Many modern AI tools depend on deep learning and can produce fluent
+but unreliable text.</td>
+</tr>
+<tr>
+<td>Neural Network</td>
+<td>A computational structure loosely inspired by connected processing
+units.</td>
+<td>It helps explain why outputs are pattern-based, not authoritative
+judgments.</td>
+</tr>
+<tr>
+<td>Large Language Model</td>
+<td>A model trained on large collections of text to predict and generate
+language.</td>
+<td>LLMs can draft guidance, checklists, and explanations, but they may
+hallucinate or overstate claims.</td>
+</tr>
+<tr>
+<td>Generative AI</td>
+<td>AI that creates new text, images, code, audio, or other
+content.</td>
+<td>Useful for drafts and examples; risky if treated as final
+authority.</td>
+</tr>
+<tr>
+<td>Foundation Model</td>
+<td>A broadly trained model that can be adapted to many tasks.</td>
+<td>Powerful, but broadness creates governance and reliability
+concerns.</td>
+</tr>
+<tr>
+<td>Hallucination</td>
+<td>A fluent AI output that is unsupported, inaccurate, or
+fabricated.</td>
+<td>Dangerous in policy, legal, disability, and accessibility
+guidance.</td>
+</tr>
+<tr>
+<td>Human Review</td>
+<td>The required step where a responsible person checks accuracy,
+accessibility, context, privacy, and bias.</td>
+<td>The central safeguard of the GLOW Lab.</td>
+</tr>
+<tr>
+<td>Accessibility Champion</td>
+<td>A partner who understands enough accessibility practice to take
+responsible action, ask better questions, and improve future work.</td>
+<td>The intended outcome of the capstone.</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

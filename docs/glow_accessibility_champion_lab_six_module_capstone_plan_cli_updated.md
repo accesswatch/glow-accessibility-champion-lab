@@ -1,4 +1,5 @@
 # GLOW Accessibility Champion Lab
+
 ## Six-Module AI Campus Champions Capstone Implementation Plan with VS Code, GitHub CLI, Git, Wiki, and Terminal Workflows
 
 Prepared for: **Jeff Bishop**  

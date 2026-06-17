@@ -1,7 +1,245 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>glow_accessibility_champion_lab_six_module_capstone_plan_cli_updated</title>
+  <style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+white-space: pre-wrap;
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">glow_accessibility_champion_lab_six_module_capstone_plan_cli_updated</h1>
+</header>
 <h1 id="glow-accessibility-champion-lab">GLOW Accessibility Champion
 Lab</h1>
-<h2
-id="six-module-ai-campus-champions-capstone-implementation-plan-with-vs-code-github-cli-git-wiki-and-terminal-workflows">Six-Module
+<h2 id="six-module-ai-campus-champions-capstone-implementation-plan-with-vs-code-github-cli-git-wiki-and-terminal-workflows">Six-Module
 AI Campus Champions Capstone Implementation Plan with VS Code, GitHub
 CLI, Git, Wiki, and Terminal Workflows</h2>
 <p>Prepared for: <strong>Jeff Bishop</strong><br />
@@ -286,8 +524,7 @@ sanitized.</li>
 <h2 id="recommended-local-folder-location">6. Recommended Local Folder
 Location</h2>
 <p>On your Windows machine, use your normal code root:</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code</span></code></pre></div>
 <p>Recommended project folder:</p>
 <pre class="text"><code>C:\code\glow-accessibility-champion-lab</code></pre>
 <p>Recommended wiki folder:</p>
@@ -297,14 +534,12 @@ class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb1-
 <hr />
 <h2 id="one-time-tool-check">7. One-Time Tool Check</h2>
 <p>Run this first:</p>
-<div class="sourceCode" id="cb5"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>git <span class="op">--</span>version</span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>git <span class="op">--</span>version</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>gh <span class="op">--</span>version</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>code <span class="op">--</span>version</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">--</span>version</span></code></pre></div>
 <p>Optional but useful:</p>
-<div class="sourceCode" id="cb6"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>rg <span class="op">--</span>version</span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>rg <span class="op">--</span>version</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>pandoc <span class="op">--</span>version</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>node <span class="op">--</span>version</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>npm <span class="op">--</span>version</span></code></pre></div>
@@ -315,16 +550,13 @@ but the command above is the useful fix when needed.</p>
 <hr />
 <h2 id="authenticate-github-cli">8. Authenticate GitHub CLI</h2>
 <p>Use:</p>
-<div class="sourceCode" id="cb8"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>gh auth status</span>
+<div class="sourceCode" id="cb8"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>gh auth status</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>gh auth login</span></code></pre></div>
 <p>Then confirm:</p>
-<div class="sourceCode" id="cb9"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>gh auth status</span>
+<div class="sourceCode" id="cb9"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>gh auth status</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>gh repo list <span class="op">--</span>limit <span class="dv">5</span></span></code></pre></div>
 <p>Recommended <code>gh</code> editor setting:</p>
-<div class="sourceCode" id="cb10"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>gh config <span class="fu">set</span> editor <span class="st">&quot;code --wait&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>gh config <span class="fu">set</span> editor <span class="st">&quot;code --wait&quot;</span></span></code></pre></div>
 <p>That makes interactive GitHub CLI editing open in VS Code and wait
 until you close the file.</p>
 <hr />
@@ -335,28 +567,22 @@ until you close the file.</p>
 <p>Recommended description:</p>
 <pre class="text"><code>Human-centered AI workflow artifacts for the GLOW Accessibility Champion Lab, a University of Arizona AI Campus Champions capstone focused on scalable, human-reviewed accessibility practice.</code></pre>
 <p>Private repository command:</p>
-<div class="sourceCode" id="cb13"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code</span>
+<div class="sourceCode" id="cb13"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>gh repo create glow-accessibility-champion-lab `</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>private `</span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>description <span class="st">&quot;Human-centered AI workflow artifacts for the GLOW Accessibility Champion Lab, a University of Arizona AI Campus Champions capstone focused on scalable, human-reviewed accessibility practice.&quot;</span> `</span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>clone</span></code></pre></div>
 <p>Then enter the project:</p>
-<div class="sourceCode" id="cb14"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span></code></pre></div>
 <p>Enable core repository features:</p>
-<div class="sourceCode" id="cb15"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>gh repo edit <span class="op">--</span>enable-issues <span class="op">--</span>enable-wiki</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>gh repo edit <span class="op">--</span>enable-issues <span class="op">--</span>enable-wiki</span></code></pre></div>
 <p>Optional topic tags:</p>
-<div class="sourceCode" id="cb16"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>gh repo edit <span class="op">--</span>add-topic accessibility <span class="op">--</span>add-topic artificial-intelligence <span class="op">--</span>add-topic glow <span class="op">--</span>add-topic ai-campus-champions</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>gh repo edit <span class="op">--</span>add-topic accessibility <span class="op">--</span>add-topic artificial-intelligence <span class="op">--</span>add-topic glow <span class="op">--</span>add-topic ai-campus-champions</span></code></pre></div>
 <p>Open the repo in the browser:</p>
-<div class="sourceCode" id="cb17"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>gh repo view <span class="op">--</span>web</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>gh repo view <span class="op">--</span>web</span></code></pre></div>
 <p>Open locally in VS Code:</p>
-<div class="sourceCode" id="cb18"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span> <span class="op">--</span>profile <span class="st">&quot;AI Campus Champions&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span> <span class="op">--</span>profile <span class="st">&quot;AI Campus Champions&quot;</span></span></code></pre></div>
 <hr />
 <h2 id="complete-repository-folder-structure">10. Complete Repository
 Folder Structure</h2>
@@ -477,8 +703,7 @@ Folder Structure</h2>
 Script</h2>
 <p>Create <code>tools/setup-glow-capstone.ps1</code> with the following
 content:</p>
-<div class="sourceCode" id="cb20"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># setup-glow-capstone.ps1</span></span>
+<div class="sourceCode" id="cb20"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># setup-glow-capstone.ps1</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Creates the GLOW Accessibility Champion Lab repository structure.</span></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Run from the repository root.</span></span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -629,42 +854,33 @@ class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb20
 <span id="cb20-149"><a href="#cb20-149" aria-hidden="true" tabindex="-1"></a><span class="fu">Write-Host</span> <span class="st">&quot;GLOW capstone repository structure created.&quot;</span></span>
 <span id="cb20-150"><a href="#cb20-150" aria-hidden="true" tabindex="-1"></a><span class="fu">Write-Host</span> <span class="st">&quot;Next: git add .; git commit -m &#39;Create GLOW capstone structure&#39;&quot;</span></span></code></pre></div>
 <p>Run it:</p>
-<div class="sourceCode" id="cb21"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
+<div class="sourceCode" id="cb21"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\setup-glow-capstone<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
 <p>Commit it:</p>
-<div class="sourceCode" id="cb22"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span></span>
+<div class="sourceCode" id="cb22"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>git status <span class="op">--</span>short</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>git commit <span class="op">-</span>m <span class="st">&quot;Create GLOW capstone structure&quot;</span></span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>git push</span></code></pre></div>
 <hr />
 <h2 id="vs-code-working-pattern">12. VS Code Working Pattern</h2>
 <p>Open the project:</p>
-<div class="sourceCode" id="cb23"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>code C<span class="op">:</span>\code\glow-accessibility-champion-lab <span class="op">--</span>profile <span class="st">&quot;AI Campus Champions&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>code C<span class="op">:</span>\code\glow-accessibility-champion-lab <span class="op">--</span>profile <span class="st">&quot;AI Campus Champions&quot;</span></span></code></pre></div>
 <p>Open a specific module file:</p>
-<div class="sourceCode" id="cb24"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\ai-accessibility-glossary<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\ai-accessibility-glossary<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Open a file at a specific line:</p>
-<div class="sourceCode" id="cb25"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">-</span>g <span class="op">.</span>\<span class="dv">05</span><span class="op">-</span>module-governance\risk-register<span class="op">.</span><span class="fu">md</span><span class="op">:</span><span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">-</span>g <span class="op">.</span>\<span class="dv">05</span><span class="op">-</span>module-governance\risk-register<span class="op">.</span><span class="fu">md</span><span class="op">:</span><span class="dv">1</span></span></code></pre></div>
 <p>Compare raw AI output to human-edited output:</p>
-<div class="sourceCode" id="cb26"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">--</span>diff <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity\raw-ai-output<span class="op">.</span><span class="fu">md</span> <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity\final-human-edited-output<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">--</span>diff <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity\raw-ai-output<span class="op">.</span><span class="fu">md</span> <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity\final-human-edited-output<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Open VS Code Insiders if you are using that build:</p>
-<div class="sourceCode" id="cb27"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>code-insiders <span class="op">.</span> <span class="op">--</span>profile <span class="st">&quot;AI Campus Champions&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>code-insiders <span class="op">.</span> <span class="op">--</span>profile <span class="st">&quot;AI Campus Champions&quot;</span></span></code></pre></div>
 <p>Search the repository from the terminal:</p>
-<div class="sourceCode" id="cb28"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;human review&quot;</span></span>
+<div class="sourceCode" id="cb28"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;human review&quot;</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;hallucination&quot;</span> <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;TODO|FIXME|VERIFY&quot;</span> <span class="op">.</span></span></code></pre></div>
 <hr />
 <h2 id="git-working-pattern">13. Git Working Pattern</h2>
 <p>Every module should follow this pattern:</p>
-<div class="sourceCode" id="cb29"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>git status <span class="op">--</span>short</span>
+<div class="sourceCode" id="cb29"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>git status <span class="op">--</span>short</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>git checkout <span class="op">-</span>b module-1-ai-foundations</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="co"># edit files</span></span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span></span>
@@ -674,18 +890,15 @@ class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb29
 <p>For a private solo capstone, pull requests are optional. They are
 still useful because they force a clean review step.</p>
 <p>To review what changed:</p>
-<div class="sourceCode" id="cb30"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>git <span class="fu">diff</span> <span class="op">--</span>stat main<span class="op">..</span><span class="fu">HEAD</span></span>
+<div class="sourceCode" id="cb30"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>git <span class="fu">diff</span> <span class="op">--</span>stat main<span class="op">..</span><span class="fu">HEAD</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>git <span class="fu">diff</span> main<span class="op">..</span><span class="fu">HEAD</span> <span class="op">--</span> <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations</span></code></pre></div>
 <p>To review in VS Code:</p>
-<div class="sourceCode" id="cb31"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">--</span>diff <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai\outputs\tool-a-output<span class="op">.</span><span class="fu">md</span> <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai\outputs\human-reviewed-output<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">--</span>diff <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai\outputs\tool-a-output<span class="op">.</span><span class="fu">md</span> <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai\outputs\human-reviewed-output<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <hr />
 <h2 id="github-issues-as-capstone-tracker">14. GitHub Issues as Capstone
 Tracker</h2>
 <p>Create labels:</p>
-<div class="sourceCode" id="cb32"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>gh label create module-1 <span class="op">--</span>description <span class="st">&quot;Module 1 AI Foundations&quot;</span> <span class="op">--</span>color 0969DA</span>
+<div class="sourceCode" id="cb32"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>gh label create module-1 <span class="op">--</span>description <span class="st">&quot;Module 1 AI Foundations&quot;</span> <span class="op">--</span>color 0969DA</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>gh label create module-2 <span class="op">--</span>description <span class="st">&quot;Module 2 Generative AI&quot;</span> <span class="op">--</span>color 8250DF</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>gh label create module-3 <span class="op">--</span>description <span class="st">&quot;Module 3 AI for Productivity&quot;</span> <span class="op">--</span>color 1F883D</span>
 <span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>gh label create module-4 <span class="op">--</span>description <span class="st">&quot;Module 4 Critical Thinking&quot;</span> <span class="op">--</span>color BF8700</span>
@@ -696,21 +909,18 @@ class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb32
 <span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>gh label create wiki <span class="op">--</span>description <span class="st">&quot;Wiki publication task&quot;</span> <span class="op">--</span>color 0E8A16</span>
 <span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>gh label create forum-post <span class="op">--</span>description <span class="st">&quot;Discussion forum draft or post&quot;</span> <span class="op">--</span>color BFDADC</span></code></pre></div>
 <p>Create module issues:</p>
-<div class="sourceCode" id="cb33"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>gh issue create <span class="op">--</span>title <span class="st">&quot;Module 1: AI Foundations artifacts&quot;</span> <span class="op">--</span>label module-1<span class="op">,</span>human-review <span class="op">--</span>body-file <span class="op">.</span>\templates\module-closeout-template<span class="op">.</span><span class="fu">md</span></span>
+<div class="sourceCode" id="cb33"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>gh issue create <span class="op">--</span>title <span class="st">&quot;Module 1: AI Foundations artifacts&quot;</span> <span class="op">--</span>label module-1<span class="op">,</span>human-review <span class="op">--</span>body-file <span class="op">.</span>\templates\module-closeout-template<span class="op">.</span><span class="fu">md</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>gh issue create <span class="op">--</span>title <span class="st">&quot;Module 2: Generative AI artifacts&quot;</span> <span class="op">--</span>label module-2<span class="op">,</span>human-review <span class="op">--</span>body-file <span class="op">.</span>\templates\module-closeout-template<span class="op">.</span><span class="fu">md</span></span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>gh issue create <span class="op">--</span>title <span class="st">&quot;Module 3: AI Productivity workflow&quot;</span> <span class="op">--</span>label module-3<span class="op">,</span>human-review<span class="op">,</span>privacy-review <span class="op">--</span>body-file <span class="op">.</span>\templates\module-closeout-template<span class="op">.</span><span class="fu">md</span></span>
 <span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>gh issue create <span class="op">--</span>title <span class="st">&quot;Module 4: Bias and fairness audit&quot;</span> <span class="op">--</span>label module-4<span class="op">,</span>human-review <span class="op">--</span>body-file <span class="op">.</span>\templates\module-closeout-template<span class="op">.</span><span class="fu">md</span></span>
 <span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>gh issue create <span class="op">--</span>title <span class="st">&quot;Module 5: Governance artifacts&quot;</span> <span class="op">--</span>label module-5<span class="op">,</span>human-review <span class="op">--</span>body-file <span class="op">.</span>\templates\module-closeout-template<span class="op">.</span><span class="fu">md</span></span>
 <span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>gh issue create <span class="op">--</span>title <span class="st">&quot;Module 6: Champion initiative package&quot;</span> <span class="op">--</span>label module-6<span class="op">,</span>human-review<span class="op">,</span>wiki <span class="op">--</span>body-file <span class="op">.</span>\templates\module-closeout-template<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>List open module issues:</p>
-<div class="sourceCode" id="cb34"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>gh issue list <span class="op">--</span>label module-1</span>
+<div class="sourceCode" id="cb34"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>gh issue list <span class="op">--</span>label module-1</span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>gh issue list <span class="op">--</span>label human-review</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>gh issue list <span class="op">--</span>search <span class="st">&quot;GLOW Accessibility Champion Lab&quot;</span></span></code></pre></div>
 <p>Close an issue when done:</p>
-<div class="sourceCode" id="cb35"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>gh issue close <span class="dv">1</span> <span class="op">--</span>comment <span class="st">&quot;Completed, reviewed, and committed.&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>gh issue close <span class="dv">1</span> <span class="op">--</span>comment <span class="st">&quot;Completed, reviewed, and committed.&quot;</span></span></code></pre></div>
 <hr />
 <h2 id="wiki-strategy">15. Wiki Strategy</h2>
 <p>Use the repository for source files and weekly working artifacts.</p>
@@ -757,8 +967,7 @@ _Sidebar.md</code></pre>
 <h2 id="create-wiki-source-pages-in-the-main-repo">16. Create Wiki
 Source Pages in the Main Repo</h2>
 <p>Create <code>tools/sync-wiki-source.ps1</code>:</p>
-<div class="sourceCode" id="cb37"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sync-wiki-source.ps1</span></span>
+<div class="sourceCode" id="cb37"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sync-wiki-source.ps1</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Creates or refreshes the wiki-source pages in the main repository.</span></span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="va">$ErrorActionPreference</span> <span class="op">=</span> <span class="st">&quot;Stop&quot;</span></span>
@@ -831,8 +1040,7 @@ class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb37
 <span id="cb37-71"><a href="#cb37-71" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-72"><a href="#cb37-72" aria-hidden="true" tabindex="-1"></a><span class="fu">Write-Host</span> <span class="st">&quot;Wiki source pages created in wiki-source.&quot;</span></span></code></pre></div>
 <p>Run it:</p>
-<div class="sourceCode" id="cb38"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\sync-wiki-source<span class="op">.</span><span class="fu">ps1</span></span>
+<div class="sourceCode" id="cb38"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\sync-wiki-source<span class="op">.</span><span class="fu">ps1</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>git add wiki-source tools\sync-wiki-source<span class="op">.</span><span class="fu">ps1</span></span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>git commit <span class="op">-</span>m <span class="st">&quot;Add wiki source page structure&quot;</span></span>
 <span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>git push</span></code></pre></div>
@@ -842,16 +1050,13 @@ from the Command Line</h2>
 <p>First, create the first wiki page in the GitHub web interface if the
 wiki is empty. A simple <code>Home</code> page is enough.</p>
 <p>Then clone the wiki:</p>
-<div class="sourceCode" id="cb39"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code</span>
+<div class="sourceCode" id="cb39"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>git clone https<span class="op">://</span>github<span class="op">.</span><span class="fu">com</span><span class="op">/</span>YOUR-USERNAME<span class="op">/</span>glow-accessibility-champion-lab<span class="op">.</span><span class="fu">wiki</span><span class="op">.</span><span class="fu">git</span></span></code></pre></div>
 <p>Or if the repo is in an organization:</p>
-<div class="sourceCode" id="cb40"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code</span>
+<div class="sourceCode" id="cb40"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>git clone https<span class="op">://</span>github<span class="op">.</span><span class="fu">com</span><span class="op">/</span>YOUR-ORG<span class="op">/</span>glow-accessibility-champion-lab<span class="op">.</span><span class="fu">wiki</span><span class="op">.</span><span class="fu">git</span></span></code></pre></div>
 <p>Create <code>tools/publish-wiki.ps1</code> in the main repo:</p>
-<div class="sourceCode" id="cb41"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># publish-wiki.ps1</span></span>
+<div class="sourceCode" id="cb41"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># publish-wiki.ps1</span></span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Copies wiki-source files into the local wiki clone, commits, and pushes.</span></span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="va">$ErrorActionPreference</span> <span class="op">=</span> <span class="st">&quot;Stop&quot;</span></span>
@@ -883,12 +1088,10 @@ class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb41
 <span id="cb41-30"><a href="#cb41-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb41-31"><a href="#cb41-31" aria-hidden="true" tabindex="-1"></a><span class="fu">Write-Host</span> <span class="st">&quot;Wiki updated.&quot;</span></span></code></pre></div>
 <p>Run:</p>
-<div class="sourceCode" id="cb42"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
+<div class="sourceCode" id="cb42"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\publish-wiki<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
 <p>Open the wiki:</p>
-<div class="sourceCode" id="cb43"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>gh repo view <span class="op">--</span>web</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>gh repo view <span class="op">--</span>web</span></code></pre></div>
 <p>Then choose the Wiki tab.</p>
 <hr />
 <h2 id="github-discussions-workflow">18. GitHub Discussions
@@ -914,16 +1117,14 @@ Module 5: Governance Guardrails for Accessibility Workflows
 Module 6: GLOW Accessibility Champion Lab Initiative</code></pre>
 <p>If the official program discussions support GitHub CLI posting and
 you have permission, use:</p>
-<div class="sourceCode" id="cb45"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>gh discussion create `</span>
+<div class="sourceCode" id="cb45"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>gh discussion create `</span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>repo UA-AI2S<span class="op">/</span>AI-Champions `</span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>category <span class="st">&quot;General&quot;</span> `</span>
 <span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>title <span class="st">&quot;Module 1: Concept Map and Accessibility Capacity Building&quot;</span> `</span>
 <span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>body-file <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\forum-post-module-1<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>If the category differs, list available discussions and check the
 repo:</p>
-<div class="sourceCode" id="cb46"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>gh discussion list <span class="op">--</span>repo UA-AI2S<span class="op">/</span>AI-Champions</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>gh discussion list <span class="op">--</span>repo UA-AI2S<span class="op">/</span>AI-Champions</span></code></pre></div>
 <p>If CLI posting is not allowed or the command is unavailable in your
 environment, keep the file locally and post through the GitHub web
 interface. The command-line value still remains: you draft, review, and
@@ -933,18 +1134,15 @@ preserve your post in the repo.</p>
 Rhythm with Commands</h2>
 <p>Use the same rhythm every week.</p>
 <h3 id="before-the-session">Before the Session</h3>
-<div class="sourceCode" id="cb47"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
+<div class="sourceCode" id="cb47"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>git pull</span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;TODO|VERIFY|human review&quot;</span></span>
 <span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span> <span class="op">--</span>profile <span class="st">&quot;AI Campus Champions&quot;</span></span></code></pre></div>
 <h3 id="during-the-session">During the Session</h3>
 <p>Open the module note file:</p>
-<div class="sourceCode" id="cb48"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\reflection-journal-entry-1<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\reflection-journal-entry-1<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Capture rough notes under:</p>
-<div class="sourceCode" id="cb49"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Session Notes</span></span>
+<div class="sourceCode" id="cb49"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Session Notes</span></span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Questions</span></span>
 <span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -954,35 +1152,28 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb49-1">
 <span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Follow-Up Actions</span></span></code></pre></div>
 <h3 id="same-day-reflection">Same Day Reflection</h3>
-<div class="sourceCode" id="cb50"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>git checkout <span class="op">-</span>b module-1-work</span>
+<div class="sourceCode" id="cb50"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>git checkout <span class="op">-</span>b module-1-work</span>
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\reflection-journal-entry-1<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Commit the reflection:</p>
-<div class="sourceCode" id="cb51"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\reflection-journal-entry-1<span class="op">.</span><span class="fu">md</span></span>
+<div class="sourceCode" id="cb51"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\reflection-journal-entry-1<span class="op">.</span><span class="fu">md</span></span>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>git commit <span class="op">-</span>m <span class="st">&quot;Draft Module 1 reflection&quot;</span></span></code></pre></div>
 <h3 id="midweek-artifact-work">Midweek Artifact Work</h3>
-<div class="sourceCode" id="cb52"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\ai-accessibility-glossary<span class="op">.</span><span class="fu">md</span></span>
+<div class="sourceCode" id="cb52"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\ai-accessibility-glossary<span class="op">.</span><span class="fu">md</span></span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\concept-map-notes<span class="op">.</span><span class="fu">md</span></span>
 <span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\llm-exploration-log<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <h3 id="end-of-week-closeout">End-of-Week Closeout</h3>
-<div class="sourceCode" id="cb53"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>git status <span class="op">--</span>short</span>
+<div class="sourceCode" id="cb53"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>git status <span class="op">--</span>short</span>
 <span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;TODO|VERIFY|PRIVATE|CONFIDENTIAL&quot;</span> <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations</span>
 <span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span></span>
 <span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>git commit <span class="op">-</span>m <span class="st">&quot;Complete Module 1 artifacts&quot;</span></span>
 <span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>git push</span></code></pre></div>
 <h3 id="wiki-update">Wiki Update</h3>
-<div class="sourceCode" id="cb54"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\wiki-source\Module-1---AI-Foundations<span class="op">.</span><span class="fu">md</span></span>
+<div class="sourceCode" id="cb54"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\wiki-source\Module-1---AI-Foundations<span class="op">.</span><span class="fu">md</span></span>
 <span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\publish-wiki<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
 <h3 id="discussion-post">Discussion Post</h3>
-<div class="sourceCode" id="cb55"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\forum-post-module-1<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\forum-post-module-1<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Optional CLI post:</p>
-<div class="sourceCode" id="cb56"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>gh discussion create `</span>
+<div class="sourceCode" id="cb56"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>gh discussion create `</span>
 <span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>repo UA-AI2S<span class="op">/</span>AI-Champions `</span>
 <span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>category <span class="st">&quot;General&quot;</span> `</span>
 <span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>title <span class="st">&quot;Module 1: Concept Map and Accessibility Capacity Building&quot;</span> `</span>
@@ -1015,21 +1206,18 @@ building.</p>
 ├── llm-exploration-log.md
 └── forum-post-module-1.md</code></pre>
 <h2 id="module-1-cli-setup">23. Module 1 CLI Setup</h2>
-<div class="sourceCode" id="cb58"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
+<div class="sourceCode" id="cb58"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
 <span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>git checkout <span class="op">-</span>b module-1-ai-foundations</span>
 <span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations <span class="op">--</span>profile <span class="st">&quot;AI Campus Champions&quot;</span></span></code></pre></div>
 <p>Create or open the files:</p>
-<div class="sourceCode" id="cb59"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\reflection-journal-entry-1<span class="op">.</span><span class="fu">md</span></span>
+<div class="sourceCode" id="cb59"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\reflection-journal-entry-1<span class="op">.</span><span class="fu">md</span></span>
 <span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\ai-accessibility-glossary<span class="op">.</span><span class="fu">md</span></span>
 <span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\concept-map-notes<span class="op">.</span><span class="fu">md</span></span>
 <span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\llm-exploration-log<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <h2 id="module-1-glossary-template">24. Module 1 Glossary Template</h2>
 <p>Create
 <code>01-module-ai-foundations/ai-accessibility-glossary.md</code>:</p>
-<div class="sourceCode" id="cb60"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># AI and Accessibility Glossary</span></span>
+<div class="sourceCode" id="cb60"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># AI and Accessibility Glossary</span></span>
 <span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Term <span class="pp">|</span> Plain-language definition <span class="pp">|</span> Accessibility relevance <span class="pp">|</span></span>
 <span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
@@ -1061,8 +1249,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb60-1">
     GLOW --&gt; Partners[Campus Partners]
     Partners --&gt; Champions[Accessibility Champions]</code></pre>
 <p>Create notes in <code>concept-map-notes.md</code>:</p>
-<div class="sourceCode" id="cb62"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 1 Concept Map Notes</span></span>
+<div class="sourceCode" id="cb62"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 1 Concept Map Notes</span></span>
 <span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>The center of my map is not the model. The center is human-centered accessibility capacity building. AI tools are one component in a larger sociotechnical workflow that includes people, policies, review practices, trust, privacy, and accessibility expertise.</span>
 <span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1073,8 +1260,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb62-1">
 Log</h2>
 <p>Create
 <code>01-module-ai-foundations/llm-exploration-log.md</code>:</p>
-<div class="sourceCode" id="cb63"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 1 LLM Exploration Log</span></span>
+<div class="sourceCode" id="cb63"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 1 LLM Exploration Log</span></span>
 <span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Prompt # <span class="pp">|</span> Tool used <span class="pp">|</span> Output summary under 40 words <span class="pp">|</span> Accuracy 1–5 <span class="pp">|</span> Usefulness 1–5 <span class="pp">|</span> Key observation <span class="pp">|</span> Accessibility implication <span class="pp">|</span></span>
 <span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---:|---:|---|---|</span></span>
@@ -1085,18 +1271,14 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb63-1">
 <span id="cb63-9"><a href="#cb63-9" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 5 <span class="pp">|</span>  <span class="pp">|</span>  <span class="pp">|</span>  <span class="pp">|</span>  <span class="pp">|</span>  <span class="pp">|</span> Recent developments can trigger hallucination. <span class="pp">|</span></span></code></pre></div>
 <h2 id="module-1-vs-code-review">27. Module 1 VS Code Review</h2>
 <p>Search for unfinished placeholders:</p>
-<div class="sourceCode" id="cb64"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;\[insert|TODO|VERIFY|TBD&quot;</span> <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;\[insert|TODO|VERIFY|TBD&quot;</span> <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations</span></code></pre></div>
 <p>Open glossary and reflection side by side:</p>
-<div class="sourceCode" id="cb65"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\ai-accessibility-glossary<span class="op">.</span><span class="fu">md</span> <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\reflection-journal-entry-1<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\ai-accessibility-glossary<span class="op">.</span><span class="fu">md</span> <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\reflection-journal-entry-1<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Jump to the concept map:</p>
-<div class="sourceCode" id="cb66"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">-</span>g <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\concept-map-notes<span class="op">.</span><span class="fu">md</span><span class="op">:</span><span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">-</span>g <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations\concept-map-notes<span class="op">.</span><span class="fu">md</span><span class="op">:</span><span class="dv">1</span></span></code></pre></div>
 <h2 id="module-1-github-issue-and-commit">28. Module 1 GitHub Issue and
 Commit</h2>
-<div class="sourceCode" id="cb67"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>gh issue create `</span>
+<div class="sourceCode" id="cb67"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>gh issue create `</span>
 <span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>title <span class="st">&quot;Module 1: AI Foundations artifacts&quot;</span> `</span>
 <span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>label module-1<span class="op">,</span>human-review `</span>
 <span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>body <span class="st">&quot;Complete glossary, concept map, LLM exploration log, reflection, and forum post draft.&quot;</span></span>
@@ -1105,17 +1287,14 @@ class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb67
 <span id="cb67-7"><a href="#cb67-7" aria-hidden="true" tabindex="-1"></a>git commit <span class="op">-</span>m <span class="st">&quot;Complete Module 1 AI foundations artifacts&quot;</span></span>
 <span id="cb67-8"><a href="#cb67-8" aria-hidden="true" tabindex="-1"></a>git push <span class="op">-</span>u origin module-1-ai-foundations</span></code></pre></div>
 <p>Optional pull request:</p>
-<div class="sourceCode" id="cb68"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>gh pr create `</span>
+<div class="sourceCode" id="cb68"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>gh pr create `</span>
 <span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>title <span class="st">&quot;Module 1 AI foundations artifacts&quot;</span> `</span>
 <span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>body <span class="st">&quot;Adds Module 1 glossary, concept map notes, LLM exploration log, reflection, and forum post draft.&quot;</span></span></code></pre></div>
 <h2 id="module-1-wiki-update">29. Module 1 Wiki Update</h2>
 <p>Open the wiki page source:</p>
-<div class="sourceCode" id="cb69"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\wiki-source\Module-1---AI-Foundations<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\wiki-source\Module-1---AI-Foundations<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Add this summary:</p>
-<div class="sourceCode" id="cb70"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 1 - AI Foundations</span></span>
+<div class="sourceCode" id="cb70"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 1 - AI Foundations</span></span>
 <span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## What I Learned</span></span>
 <span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1133,20 +1312,17 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb70-1">
 <span id="cb70-16"><a href="#cb70-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reflection journal entry</span>
 <span id="cb70-17"><a href="#cb70-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Discussion post draft</span></code></pre></div>
 <p>Publish:</p>
-<div class="sourceCode" id="cb71"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\publish-wiki<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
+<div class="sourceCode" id="cb71"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\publish-wiki<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
 <h2 id="module-1-discussion-post">30. Module 1 Discussion Post</h2>
 <p>Create
 <code>01-module-ai-foundations/forum-post-module-1.md</code>:</p>
-<div class="sourceCode" id="cb72"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>For my Module 1 concept map, I placed human-centered accessibility capacity building at the center rather than placing the AI model at the center. The required nodes helped me clarify the technical relationships among AI, machine learning, deep learning, neural networks, LLMs, generative AI, and foundation models. The accessibility extension helped me ask a different question: where does human responsibility enter the workflow?</span>
+<div class="sourceCode" id="cb72"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>For my Module 1 concept map, I placed human-centered accessibility capacity building at the center rather than placing the AI model at the center. The required nodes helped me clarify the technical relationships among AI, machine learning, deep learning, neural networks, LLMs, generative AI, and foundation models. The accessibility extension helped me ask a different question: where does human responsibility enter the workflow?</span>
 <span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>My emerging capstone idea is the GLOW Accessibility Champion Lab. The problem I want to address is that accessibility does not scale when specialists are expected to fix everything. Campus partners need guided workflows that help them understand accessibility patterns, improve future content, and know when human review is required.</span>
 <span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a>One question I am still thinking about: How do we design AI-supported workflows that help people build confidence without causing them to overtrust the AI output?</span></code></pre></div>
 <p>Optional post command:</p>
-<div class="sourceCode" id="cb73"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>gh discussion create `</span>
+<div class="sourceCode" id="cb73"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>gh discussion create `</span>
 <span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>repo UA-AI2S<span class="op">/</span>AI-Champions `</span>
 <span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>category <span class="st">&quot;General&quot;</span> `</span>
 <span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>title <span class="st">&quot;Module 1: Concept Map and Accessibility Capacity Building&quot;</span> `</span>
@@ -1183,13 +1359,11 @@ essential.</p>
 ├── tool-landscape-annotation.md
 └── forum-post-module-2.md</code></pre>
 <h2 id="module-2-cli-setup">34. Module 2 CLI Setup</h2>
-<div class="sourceCode" id="cb75"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
+<div class="sourceCode" id="cb75"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
 <span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>git checkout <span class="op">-</span>b module-2-generative-ai</span>
 <span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai <span class="op">--</span>profile <span class="st">&quot;AI Campus Champions&quot;</span></span></code></pre></div>
 <p>Create prompt files:</p>
-<div class="sourceCode" id="cb76"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="vs">@&quot;</span></span>
+<div class="sourceCode" id="cb76"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="vs">@&quot;</span></span>
 <span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="vs">Explain the difference between WCAG 2.1 AA and WCAG 2.2 AA for a busy campus content owner. Include what they should do differently this week.</span></span>
 <span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a><span class="vs">&quot;@</span> <span class="op">|</span> <span class="fu">Set-Content</span> <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai\prompts\prompt-01-wcag-explanation<span class="op">.</span><span class="fu">md</span> <span class="op">-</span>Encoding UTF8</span>
 <span id="cb76-4"><a href="#cb76-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1209,8 +1383,7 @@ class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb76
 <span id="cb76-18"><a href="#cb76-18" aria-hidden="true" tabindex="-1"></a><span class="vs">Create a human-review checklist for AI-assisted accessibility guidance.</span></span>
 <span id="cb76-19"><a href="#cb76-19" aria-hidden="true" tabindex="-1"></a><span class="vs">&quot;@</span> <span class="op">|</span> <span class="fu">Set-Content</span> <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai\prompts\prompt-05-human-review-checklist<span class="op">.</span><span class="fu">md</span> <span class="op">-</span>Encoding UTF8</span></code></pre></div>
 <p>Open prompts:</p>
-<div class="sourceCode" id="cb77"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai\prompts</span></code></pre></div>
+<div class="sourceCode" id="cb77"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai\prompts</span></code></pre></div>
 <h2 id="module-2-two-tool-comparison">35. Module 2 Two-Tool
 Comparison</h2>
 <p>Use two tools such as ChatGPT, Claude, Gemini, Copilot, GLOW if
@@ -1219,11 +1392,9 @@ available, or another UA-approved AI tool.</p>
 <pre class="text"><code>02-module-generative-ai/outputs/tool-a-output.md
 02-module-generative-ai/outputs/tool-b-output.md</code></pre>
 <p>Compare outputs:</p>
-<div class="sourceCode" id="cb79"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">--</span>diff <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai\outputs\tool-a-output<span class="op">.</span><span class="fu">md</span> <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai\outputs\tool-b-output<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">--</span>diff <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai\outputs\tool-a-output<span class="op">.</span><span class="fu">md</span> <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai\outputs\tool-b-output<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Create <code>two-tool-comparison.md</code>:</p>
-<div class="sourceCode" id="cb80"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Two-Tool Comparison</span></span>
+<div class="sourceCode" id="cb80"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Two-Tool Comparison</span></span>
 <span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Prompt <span class="pp">|</span> Tool A output quality 1–5 <span class="pp">|</span> Tool B output quality 1–5 <span class="pp">|</span> Accuracy <span class="pp">|</span> Accessibility usefulness <span class="pp">|</span> Tone <span class="pp">|</span> Hallucination risk <span class="pp">|</span> Winner <span class="pp">|</span> Notes <span class="pp">|</span></span>
 <span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---:|---:|---|---|---|---|---|---|</span></span>
@@ -1239,8 +1410,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb80-1">
 <h2 id="module-2-prompt-engineering-log">36. Module 2 Prompt Engineering
 Log</h2>
 <p>Create <code>prompt-engineering-log.md</code>:</p>
-<div class="sourceCode" id="cb81"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 2 Prompt Engineering Log</span></span>
+<div class="sourceCode" id="cb81"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 2 Prompt Engineering Log</span></span>
 <span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Target Task</span></span>
 <span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1312,8 +1482,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb81-1">
 <h2 id="module-2-hallucination-audit">37. Module 2 Hallucination
 Audit</h2>
 <p>Create <code>hallucination-audit.md</code>:</p>
-<div class="sourceCode" id="cb82"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Accessibility Hallucination Checklist</span></span>
+<div class="sourceCode" id="cb82"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Accessibility Hallucination Checklist</span></span>
 <span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Claim type <span class="pp">|</span> Risk <span class="pp">|</span> Verification source <span class="pp">|</span></span>
 <span id="cb82-4"><a href="#cb82-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
@@ -1333,22 +1502,17 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb82-1">
 <span id="cb82-18"><a href="#cb82-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> High <span class="pp">|</span> Could influence legal, policy, accommodation, or conformance decisions. <span class="pp">|</span> Claiming a PDF is compliant without inspection. <span class="pp">|</span></span></code></pre></div>
 <h2 id="module-2-cli-review">38. Module 2 CLI Review</h2>
 <p>Search for risky claims:</p>
-<div class="sourceCode" id="cb83"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;must|compliant|guarantee|always|never|legal|WCAG|ADA|Title II&quot;</span> <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai</span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;must|compliant|guarantee|always|never|legal|WCAG|ADA|Title II&quot;</span> <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai</span></code></pre></div>
 <p>Compare raw and reviewed output:</p>
-<div class="sourceCode" id="cb84"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">--</span>diff <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai\outputs\tool-a-output<span class="op">.</span><span class="fu">md</span> <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai\outputs\human-reviewed-output<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">--</span>diff <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai\outputs\tool-a-output<span class="op">.</span><span class="fu">md</span> <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai\outputs\human-reviewed-output<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Commit:</p>
-<div class="sourceCode" id="cb85"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai</span>
+<div class="sourceCode" id="cb85"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai</span>
 <span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>git commit <span class="op">-</span>m <span class="st">&quot;Complete Module 2 generative AI artifacts&quot;</span></span>
 <span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a>git push <span class="op">-</span>u origin module-2-generative-ai</span></code></pre></div>
 <h2 id="module-2-wiki-update">39. Module 2 Wiki Update</h2>
-<div class="sourceCode" id="cb86"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\wiki-source\Module-2---Generative-AI<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\wiki-source\Module-2---Generative-AI<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Add:</p>
-<div class="sourceCode" id="cb87"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 2 - Generative AI</span></span>
+<div class="sourceCode" id="cb87"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 2 - Generative AI</span></span>
 <span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb87-3"><a href="#cb87-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## What I Learned</span></span>
 <span id="cb87-4"><a href="#cb87-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1366,12 +1530,10 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb87-1">
 <span id="cb87-16"><a href="#cb87-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AI tool landscape annotation</span>
 <span id="cb87-17"><a href="#cb87-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Discussion post draft</span></code></pre></div>
 <p>Publish:</p>
-<div class="sourceCode" id="cb88"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\publish-wiki<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\publish-wiki<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
 <h2 id="module-2-discussion-post">40. Module 2 Discussion Post</h2>
 <p>Create <code>forum-post-module-2.md</code>:</p>
-<div class="sourceCode" id="cb89"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>For Module 2, I used accessibility coaching as my professional task. My first prompt simply asked the model to rewrite an announcement to make it more accessible. The output improved the surface text, but it did not teach the content owner much.</span>
+<div class="sourceCode" id="cb89"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>For Module 2, I used accessibility coaching as my professional task. My first prompt simply asked the model to rewrite an announcement to make it more accessible. The output improved the surface text, but it did not teach the content owner much.</span>
 <span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a>The biggest improvement came when I added a specific role and output structure: accessibility communication coach, public university context, supportive tone, teaching note, and human-review checklist. That shifted the output from “fixed text” to a reusable coaching workflow.</span>
 <span id="cb89-4"><a href="#cb89-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1379,8 +1541,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb89-1">
 <span id="cb89-6"><a href="#cb89-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb89-7"><a href="#cb89-7" aria-hidden="true" tabindex="-1"></a>Peer question: Which matters more in your context: making the AI output better, or making the workflow around the output safer and more teachable?</span></code></pre></div>
 <p>Optional CLI post:</p>
-<div class="sourceCode" id="cb90"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>gh discussion create `</span>
+<div class="sourceCode" id="cb90"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>gh discussion create `</span>
 <span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>repo UA-AI2S<span class="op">/</span>AI-Champions `</span>
 <span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>category <span class="st">&quot;General&quot;</span> `</span>
 <span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>title <span class="st">&quot;Module 2: Prompt Iteration for Accessibility Coaching&quot;</span> `</span>
@@ -1410,15 +1571,13 @@ verification is non-negotiable.</p>
 ├── workflow-canvas.md
 └── forum-post-module-3.md</code></pre>
 <h2 id="module-3-cli-setup">44. Module 3 CLI Setup</h2>
-<div class="sourceCode" id="cb92"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
+<div class="sourceCode" id="cb92"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
 <span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a>git checkout <span class="op">-</span>b module-3-ai-productivity</span>
 <span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity <span class="op">--</span>profile <span class="st">&quot;AI Campus Champions&quot;</span></span></code></pre></div>
 <h2 id="module-3-five-task-workflow-audit">45. Module 3 Five-Task
 Workflow Audit</h2>
 <p>Create <code>workflow-audit-matrix.md</code>:</p>
-<div class="sourceCode" id="cb93"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 3 Workflow Audit Matrix</span></span>
+<div class="sourceCode" id="cb93"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 3 Workflow Audit Matrix</span></span>
 <span id="cb93-2"><a href="#cb93-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb93-3"><a href="#cb93-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Task <span class="pp">|</span> Frequency <span class="pp">|</span> AI usefulness 1–5 <span class="pp">|</span> Risk 1–5 <span class="pp">|</span> Data sensitivity <span class="pp">|</span> Human judgment needed <span class="pp">|</span> Good candidate? <span class="pp">|</span></span>
 <span id="cb93-4"><a href="#cb93-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---:|---:|---:|---|---|---|</span></span>
@@ -1434,8 +1593,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb93-1">
 <h2 id="module-3-ai-assisted-task-log">46. Module 3 AI-Assisted Task
 Log</h2>
 <p>Create <code>ai-assisted-task-log.md</code>:</p>
-<div class="sourceCode" id="cb94"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 3 AI-Assisted Task Log</span></span>
+<div class="sourceCode" id="cb94"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 3 AI-Assisted Task Log</span></span>
 <span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Task Selected</span></span>
 <span id="cb94-4"><a href="#cb94-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1494,22 +1652,17 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb94-1">
 <h2 id="module-3-raw-vs-final-output-review">47. Module 3 Raw vs Final
 Output Review</h2>
 <p>Save raw output:</p>
-<div class="sourceCode" id="cb95"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity\raw-ai-output<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity\raw-ai-output<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Save final edited output:</p>
-<div class="sourceCode" id="cb96"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity\final-human-edited-output<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity\final-human-edited-output<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Compare:</p>
-<div class="sourceCode" id="cb97"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">--</span>diff <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity\raw-ai-output<span class="op">.</span><span class="fu">md</span> <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity\final-human-edited-output<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">--</span>diff <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity\raw-ai-output<span class="op">.</span><span class="fu">md</span> <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity\final-human-edited-output<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Use Git to inspect changes:</p>
-<div class="sourceCode" id="cb98"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a>git <span class="fu">diff</span> <span class="op">--</span> <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity</span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a>git <span class="fu">diff</span> <span class="op">--</span> <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity</span></code></pre></div>
 <h2 id="module-3-disclosure-decision">48. Module 3 Disclosure
 Decision</h2>
 <p>Create <code>disclosure-decision.md</code>:</p>
-<div class="sourceCode" id="cb99"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Disclosure Decision</span></span>
+<div class="sourceCode" id="cb99"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Disclosure Decision</span></span>
 <span id="cb99-2"><a href="#cb99-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb99-3"><a href="#cb99-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Was AI used?</span></span>
 <span id="cb99-4"><a href="#cb99-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1532,8 +1685,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb99-1">
 <span id="cb99-21"><a href="#cb99-21" aria-hidden="true" tabindex="-1"></a>This draft was developed with AI assistance and then reviewed and revised by a human accessibility professional. The AI tool supported drafting and structure; human review determined final accuracy, tone, and appropriateness.</span></code></pre></div>
 <h2 id="module-3-workflow-canvas">49. Module 3 Workflow Canvas</h2>
 <p>Create <code>workflow-canvas.md</code>:</p>
-<div class="sourceCode" id="cb100"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 3 GLOW Workflow Canvas</span></span>
+<div class="sourceCode" id="cb100"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 3 GLOW Workflow Canvas</span></span>
 <span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb100-3"><a href="#cb100-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Task</span></span>
 <span id="cb100-4"><a href="#cb100-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1564,22 +1716,17 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb100-1"
 <span id="cb100-29"><a href="#cb100-29" aria-hidden="true" tabindex="-1"></a>Can become a GLOW prompt template, training exercise, or lab activity.</span></code></pre></div>
 <h2 id="module-3-cli-review">50. Module 3 CLI Review</h2>
 <p>Search for privacy-sensitive language:</p>
-<div class="sourceCode" id="cb101"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;student|employee|accommodation|diagnosis|medical|private|confidential|name|email|phone&quot;</span> <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity</span></code></pre></div>
+<div class="sourceCode" id="cb101"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;student|employee|accommodation|diagnosis|medical|private|confidential|name|email|phone&quot;</span> <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity</span></code></pre></div>
 <p>Search for overclaiming:</p>
-<div class="sourceCode" id="cb102"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;compliant|guarantee|fully accessible|legal advice|must always&quot;</span> <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity</span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;compliant|guarantee|fully accessible|legal advice|must always&quot;</span> <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity</span></code></pre></div>
 <p>Commit:</p>
-<div class="sourceCode" id="cb103"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity</span>
+<div class="sourceCode" id="cb103"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity</span>
 <span id="cb103-2"><a href="#cb103-2" aria-hidden="true" tabindex="-1"></a>git commit <span class="op">-</span>m <span class="st">&quot;Complete Module 3 productivity workflow artifacts&quot;</span></span>
 <span id="cb103-3"><a href="#cb103-3" aria-hidden="true" tabindex="-1"></a>git push <span class="op">-</span>u origin module-3-ai-productivity</span></code></pre></div>
 <h2 id="module-3-wiki-update">51. Module 3 Wiki Update</h2>
-<div class="sourceCode" id="cb104"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\wiki-source\Module-3---AI-for-Productivity<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\wiki-source\Module-3---AI-for-Productivity<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Add:</p>
-<div class="sourceCode" id="cb105"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 3 - AI for Productivity</span></span>
+<div class="sourceCode" id="cb105"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 3 - AI for Productivity</span></span>
 <span id="cb105-2"><a href="#cb105-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb105-3"><a href="#cb105-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## What I Learned</span></span>
 <span id="cb105-4"><a href="#cb105-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1598,12 +1745,10 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb105-1"
 <span id="cb105-17"><a href="#cb105-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Disclosure decision</span>
 <span id="cb105-18"><a href="#cb105-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Workflow canvas</span></code></pre></div>
 <p>Publish:</p>
-<div class="sourceCode" id="cb106"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\publish-wiki<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\publish-wiki<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
 <h2 id="module-3-discussion-post">52. Module 3 Discussion Post</h2>
 <p>Create <code>forum-post-module-3.md</code>:</p>
-<div class="sourceCode" id="cb107"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a>For Module 3, I audited several recurring accessibility tasks and selected a low-risk communication coaching task for AI-supported workflow design. I intentionally avoided high-risk accommodation or policy decisions.</span>
+<div class="sourceCode" id="cb107"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a>For Module 3, I audited several recurring accessibility tasks and selected a low-risk communication coaching task for AI-supported workflow design. I intentionally avoided high-risk accommodation or policy decisions.</span>
 <span id="cb107-2"><a href="#cb107-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb107-3"><a href="#cb107-3" aria-hidden="true" tabindex="-1"></a>The most useful lesson was that AI productivity is not just about saving time. It is about deciding which tasks are appropriate, documenting the prompt and output, and making human review visible.</span>
 <span id="cb107-4"><a href="#cb107-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1611,8 +1756,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb107-1"
 <span id="cb107-6"><a href="#cb107-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb107-7"><a href="#cb107-7" aria-hidden="true" tabindex="-1"></a>Peer question: What recurring task in your work is useful enough for AI support but safe enough to practice with public or non-sensitive information?</span></code></pre></div>
 <p>Optional CLI post:</p>
-<div class="sourceCode" id="cb108"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a>gh discussion create `</span>
+<div class="sourceCode" id="cb108"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a>gh discussion create `</span>
 <span id="cb108-2"><a href="#cb108-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>repo UA-AI2S<span class="op">/</span>AI-Champions `</span>
 <span id="cb108-3"><a href="#cb108-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>category <span class="st">&quot;General&quot;</span> `</span>
 <span id="cb108-4"><a href="#cb108-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>title <span class="st">&quot;Module 3: AI-Assisted Workflow for Accessible Communications&quot;</span> `</span>
@@ -1640,15 +1784,13 @@ risks.</p>
 ├── fairness-review.md
 └── forum-post-module-4.md</code></pre>
 <h2 id="module-4-cli-setup">56. Module 4 CLI Setup</h2>
-<div class="sourceCode" id="cb110"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
+<div class="sourceCode" id="cb110"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
 <span id="cb110-2"><a href="#cb110-2" aria-hidden="true" tabindex="-1"></a>git checkout <span class="op">-</span>b module-4-critical-thinking</span>
 <span id="cb110-3"><a href="#cb110-3" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">04</span><span class="op">-</span>module-critical-thinking <span class="op">--</span>profile <span class="st">&quot;AI Campus Champions&quot;</span></span></code></pre></div>
 <h2 id="module-4-disability-and-accessibility-bias-audit">57. Module 4
 Disability and Accessibility Bias Audit</h2>
 <p>Create <code>disability-accessibility-bias-audit.md</code>:</p>
-<div class="sourceCode" id="cb111"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Disability and Accessibility Bias Audit</span></span>
+<div class="sourceCode" id="cb111"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Disability and Accessibility Bias Audit</span></span>
 <span id="cb111-2"><a href="#cb111-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb111-3"><a href="#cb111-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Purpose</span></span>
 <span id="cb111-4"><a href="#cb111-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1676,8 +1818,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb111-1"
 <h2 id="module-4-landmark-bias-case-analysis">58. Module 4 Landmark Bias
 Case Analysis</h2>
 <p>Create <code>landmark-bias-case-analysis.md</code>:</p>
-<div class="sourceCode" id="cb112"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Landmark Bias Case Analysis</span></span>
+<div class="sourceCode" id="cb112"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Landmark Bias Case Analysis</span></span>
 <span id="cb112-2"><a href="#cb112-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb112-3"><a href="#cb112-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Case Selected</span></span>
 <span id="cb112-4"><a href="#cb112-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1701,8 +1842,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb112-1"
 <h2 id="module-4-stochastic-parrots-annotation">59. Module 4 Stochastic
 Parrots Annotation</h2>
 <p>Create <code>stochastic-parrots-annotation.md</code>:</p>
-<div class="sourceCode" id="cb113"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Stochastic Parrots Annotation</span></span>
+<div class="sourceCode" id="cb113"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Stochastic Parrots Annotation</span></span>
 <span id="cb113-2"><a href="#cb113-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb113-3"><a href="#cb113-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Core Point</span></span>
 <span id="cb113-4"><a href="#cb113-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1717,8 +1857,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb113-1"
 <span id="cb113-13"><a href="#cb113-13" aria-hidden="true" tabindex="-1"></a>GLOW should constrain AI into narrow workflows with trusted guidance, visible assumptions, output formats, and required human review.</span></code></pre></div>
 <h2 id="module-4-fairness-review">60. Module 4 Fairness Review</h2>
 <p>Create <code>fairness-review.md</code>:</p>
-<div class="sourceCode" id="cb114"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># GLOW Fairness Review Checklist</span></span>
+<div class="sourceCode" id="cb114"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># GLOW Fairness Review Checklist</span></span>
 <span id="cb114-2"><a href="#cb114-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb114-3"><a href="#cb114-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Before Using AI</span></span>
 <span id="cb114-4"><a href="#cb114-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1743,22 +1882,17 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb114-1"
 <span id="cb114-23"><a href="#cb114-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Has the public version been sanitized?</span></code></pre></div>
 <h2 id="module-4-cli-review">61. Module 4 CLI Review</h2>
 <p>Search for risky language:</p>
-<div class="sourceCode" id="cb115"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;disabled people are|the blind|suffer|wheelchair-bound|normal users|all screen reader users|guarantee|fully accessible&quot;</span> <span class="op">.</span>\<span class="dv">04</span><span class="op">-</span>module-critical-thinking</span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;disabled people are|the blind|suffer|wheelchair-bound|normal users|all screen reader users|guarantee|fully accessible&quot;</span> <span class="op">.</span>\<span class="dv">04</span><span class="op">-</span>module-critical-thinking</span></code></pre></div>
 <p>Search for missing human-review language:</p>
-<div class="sourceCode" id="cb116"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;human review|expert review|verify|context&quot;</span> <span class="op">.</span>\<span class="dv">04</span><span class="op">-</span>module-critical-thinking</span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;human review|expert review|verify|context&quot;</span> <span class="op">.</span>\<span class="dv">04</span><span class="op">-</span>module-critical-thinking</span></code></pre></div>
 <p>Commit:</p>
-<div class="sourceCode" id="cb117"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span>\<span class="dv">04</span><span class="op">-</span>module-critical-thinking</span>
+<div class="sourceCode" id="cb117"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span>\<span class="dv">04</span><span class="op">-</span>module-critical-thinking</span>
 <span id="cb117-2"><a href="#cb117-2" aria-hidden="true" tabindex="-1"></a>git commit <span class="op">-</span>m <span class="st">&quot;Complete Module 4 bias and fairness artifacts&quot;</span></span>
 <span id="cb117-3"><a href="#cb117-3" aria-hidden="true" tabindex="-1"></a>git push <span class="op">-</span>u origin module-4-critical-thinking</span></code></pre></div>
 <h2 id="module-4-wiki-update">62. Module 4 Wiki Update</h2>
-<div class="sourceCode" id="cb118"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\wiki-source\Module-4---Critical-Thinking-About-AI<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\wiki-source\Module-4---Critical-Thinking-About-AI<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Add:</p>
-<div class="sourceCode" id="cb119"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb119-1"><a href="#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 4 - Critical Thinking About AI</span></span>
+<div class="sourceCode" id="cb119"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb119-1"><a href="#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 4 - Critical Thinking About AI</span></span>
 <span id="cb119-2"><a href="#cb119-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb119-3"><a href="#cb119-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## What I Learned</span></span>
 <span id="cb119-4"><a href="#cb119-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1775,12 +1909,10 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb119-1"
 <span id="cb119-15"><a href="#cb119-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Stochastic Parrots annotation</span>
 <span id="cb119-16"><a href="#cb119-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Fairness review checklist</span></code></pre></div>
 <p>Publish:</p>
-<div class="sourceCode" id="cb120"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\publish-wiki<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\publish-wiki<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
 <h2 id="module-4-discussion-post">63. Module 4 Discussion Post</h2>
 <p>Create <code>forum-post-module-4.md</code>:</p>
-<div class="sourceCode" id="cb121"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb121-1"><a href="#cb121-1" aria-hidden="true" tabindex="-1"></a>For Module 4, I focused on disability and accessibility bias in AI-generated guidance. One risk I see is that AI can sound very polished while flattening disability experience or overstating what automated tools can do.</span>
+<div class="sourceCode" id="cb121"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb121-1"><a href="#cb121-1" aria-hidden="true" tabindex="-1"></a>For Module 4, I focused on disability and accessibility bias in AI-generated guidance. One risk I see is that AI can sound very polished while flattening disability experience or overstating what automated tools can do.</span>
 <span id="cb121-2"><a href="#cb121-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb121-3"><a href="#cb121-3" aria-hidden="true" tabindex="-1"></a>For my GLOW Accessibility Champion Lab capstone, this means fairness review has to be built into the workflow, not added at the end. A GLOW workflow should ask whether the output treats disabled people as a monolith, whether it overgeneralizes assistive technology behavior, and whether it clearly identifies where human review is required.</span>
 <span id="cb121-4"><a href="#cb121-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1788,8 +1920,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb121-1"
 <span id="cb121-6"><a href="#cb121-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb121-7"><a href="#cb121-7" aria-hidden="true" tabindex="-1"></a>Peer question: Where might AI outputs in your work sound helpful while quietly oversimplifying the people or communities affected by the work?</span></code></pre></div>
 <p>Optional CLI post:</p>
-<div class="sourceCode" id="cb122"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a>gh discussion create `</span>
+<div class="sourceCode" id="cb122"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a>gh discussion create `</span>
 <span id="cb122-2"><a href="#cb122-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>repo UA-AI2S<span class="op">/</span>AI-Champions `</span>
 <span id="cb122-3"><a href="#cb122-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>category <span class="st">&quot;General&quot;</span> `</span>
 <span id="cb122-4"><a href="#cb122-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>title <span class="st">&quot;Module 4: Disability and Accessibility Bias Audit&quot;</span> `</span>
@@ -1815,14 +1946,12 @@ for AI-supported accessibility workflows.</p>
 ├── risk-register.md
 └── forum-post-module-5.md</code></pre>
 <h2 id="module-5-cli-setup">67. Module 5 CLI Setup</h2>
-<div class="sourceCode" id="cb124"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
+<div class="sourceCode" id="cb124"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
 <span id="cb124-2"><a href="#cb124-2" aria-hidden="true" tabindex="-1"></a>git checkout <span class="op">-</span>b module-5-ai-governance</span>
 <span id="cb124-3"><a href="#cb124-3" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">05</span><span class="op">-</span>module-governance <span class="op">--</span>profile <span class="st">&quot;AI Campus Champions&quot;</span></span></code></pre></div>
 <h2 id="module-5-risk-register">68. Module 5 Risk Register</h2>
 <p>Create <code>risk-register.md</code>:</p>
-<div class="sourceCode" id="cb125"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb125-1"><a href="#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># GLOW Accessibility Champion Lab Risk Register</span></span>
+<div class="sourceCode" id="cb125"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb125-1"><a href="#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># GLOW Accessibility Champion Lab Risk Register</span></span>
 <span id="cb125-2"><a href="#cb125-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb125-3"><a href="#cb125-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Risk <span class="pp">|</span> Likelihood <span class="pp">|</span> Impact <span class="pp">|</span> Mitigation <span class="pp">|</span> Owner <span class="pp">|</span> Review status <span class="pp">|</span></span>
 <span id="cb125-4"><a href="#cb125-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|---|---|</span></span>
@@ -1836,8 +1965,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb125-1"
 <h2 id="module-5-governance-principle-application">69. Module 5
 Governance Principle Application</h2>
 <p>Create <code>nist-unesco-principle-application.md</code>:</p>
-<div class="sourceCode" id="cb126"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb126-1"><a href="#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Governance Principle Application</span></span>
+<div class="sourceCode" id="cb126"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb126-1"><a href="#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Governance Principle Application</span></span>
 <span id="cb126-2"><a href="#cb126-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb126-3"><a href="#cb126-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Principle <span class="pp">|</span> Meaning for GLOW <span class="pp">|</span> Required practice <span class="pp">|</span></span>
 <span id="cb126-4"><a href="#cb126-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
@@ -1850,8 +1978,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb126-1"
 <h2 id="module-5-unit-level-acceptable-use-guideline">70. Module 5
 Unit-Level Acceptable Use Guideline</h2>
 <p>Create <code>unit-ai-acceptable-use-guideline.md</code>:</p>
-<div class="sourceCode" id="cb127"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Unit-Level AI Acceptable Use Guideline for Accessibility Work</span></span>
+<div class="sourceCode" id="cb127"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Unit-Level AI Acceptable Use Guideline for Accessibility Work</span></span>
 <span id="cb127-2"><a href="#cb127-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb127-3"><a href="#cb127-3" aria-hidden="true" tabindex="-1"></a>AI tools may be used to support low-risk accessibility drafting, brainstorming, plain-language rewriting, checklist development, and training examples when the input is public, fictional, or appropriately sanitized. AI tools must not be used to make final accessibility, legal, accommodation, medical, employment, or policy decisions.</span>
 <span id="cb127-4"><a href="#cb127-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1861,8 +1988,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb127-1"
 <h2 id="module-5-policy-position-paper">71. Module 5 Policy Position
 Paper</h2>
 <p>Create <code>policy-position-paper.md</code>:</p>
-<div class="sourceCode" id="cb128"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Policy Position Paper</span></span>
+<div class="sourceCode" id="cb128"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Policy Position Paper</span></span>
 <span id="cb128-2"><a href="#cb128-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb128-3"><a href="#cb128-3" aria-hidden="true" tabindex="-1"></a>AI can support accessibility capacity building when it is used as a structured helper, not as a decision maker. In accessibility work, the greatest opportunity is not replacing expertise. The greatest opportunity is helping more campus partners understand patterns, improve future content, and know when to ask for help.</span>
 <span id="cb128-4"><a href="#cb128-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1874,8 +2000,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb128-1"
 <h2 id="module-5-github-governance-files">72. Module 5 GitHub Governance
 Files</h2>
 <p>Create an issue template for capstone tasks:</p>
-<div class="sourceCode" id="cb129"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="vs">@&quot;</span></span>
+<div class="sourceCode" id="cb129"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="vs">@&quot;</span></span>
 <span id="cb129-2"><a href="#cb129-2" aria-hidden="true" tabindex="-1"></a><span class="vs">name: Capstone task</span></span>
 <span id="cb129-3"><a href="#cb129-3" aria-hidden="true" tabindex="-1"></a><span class="vs">description: Track a GLOW Accessibility Champion Lab capstone task</span></span>
 <span id="cb129-4"><a href="#cb129-4" aria-hidden="true" tabindex="-1"></a><span class="vs">title: &quot;[Capstone]: &quot;</span></span>
@@ -1907,8 +2032,7 @@ class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb12
 <span id="cb129-30"><a href="#cb129-30" aria-hidden="true" tabindex="-1"></a><span class="vs">&quot;@</span> <span class="op">|</span> <span class="fu">Set-Content</span> <span class="op">.</span>\<span class="op">.</span><span class="fu">github</span>\ISSUE_TEMPLATE\capstone-task<span class="op">.</span><span class="fu">yml</span> <span class="op">-</span>Encoding UTF8</span></code></pre></div>
 <p>Create <code>SECURITY.md</code> or <code>SAFETY.md</code> if the
 repository may later become public:</p>
-<div class="sourceCode" id="cb130"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb130-1"><a href="#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="vs">@&quot;</span></span>
+<div class="sourceCode" id="cb130"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb130-1"><a href="#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="vs">@&quot;</span></span>
 <span id="cb130-2"><a href="#cb130-2" aria-hidden="true" tabindex="-1"></a><span class="vs"># Safety and Privacy</span></span>
 <span id="cb130-3"><a href="#cb130-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb130-4"><a href="#cb130-4" aria-hidden="true" tabindex="-1"></a><span class="vs">Do not commit sensitive student, employee, accommodation, medical, legal, financial, or confidential institutional information to this repository.</span></span>
@@ -1919,22 +2043,17 @@ class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb13
 <span id="cb130-9"><a href="#cb130-9" aria-hidden="true" tabindex="-1"></a><span class="vs">&quot;@</span> <span class="op">|</span> <span class="fu">Set-Content</span> <span class="op">.</span>\SAFETY<span class="op">.</span><span class="fu">md</span> <span class="op">-</span>Encoding UTF8</span></code></pre></div>
 <h2 id="module-5-cli-review">73. Module 5 CLI Review</h2>
 <p>Search for sensitive terms:</p>
-<div class="sourceCode" id="cb131"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb131-1"><a href="#cb131-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;student|employee|accommodation|diagnosis|medical|FERPA|HIPAA|private|confidential&quot;</span> <span class="op">.</span>\<span class="dv">05</span><span class="op">-</span>module-governance <span class="op">.</span>\SAFETY<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb131"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb131-1"><a href="#cb131-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;student|employee|accommodation|diagnosis|medical|FERPA|HIPAA|private|confidential&quot;</span> <span class="op">.</span>\<span class="dv">05</span><span class="op">-</span>module-governance <span class="op">.</span>\SAFETY<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Search for safeguard coverage:</p>
-<div class="sourceCode" id="cb132"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;human review|privacy|fairness|accountability|verification|sanitized&quot;</span> <span class="op">.</span>\<span class="dv">05</span><span class="op">-</span>module-governance <span class="op">.</span>\SAFETY<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb132"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;human review|privacy|fairness|accountability|verification|sanitized&quot;</span> <span class="op">.</span>\<span class="dv">05</span><span class="op">-</span>module-governance <span class="op">.</span>\SAFETY<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Commit:</p>
-<div class="sourceCode" id="cb133"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb133-1"><a href="#cb133-1" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span>\<span class="dv">05</span><span class="op">-</span>module-governance <span class="op">.</span>\<span class="op">.</span><span class="fu">github</span> <span class="op">.</span>\SAFETY<span class="op">.</span><span class="fu">md</span></span>
+<div class="sourceCode" id="cb133"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb133-1"><a href="#cb133-1" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span>\<span class="dv">05</span><span class="op">-</span>module-governance <span class="op">.</span>\<span class="op">.</span><span class="fu">github</span> <span class="op">.</span>\SAFETY<span class="op">.</span><span class="fu">md</span></span>
 <span id="cb133-2"><a href="#cb133-2" aria-hidden="true" tabindex="-1"></a>git commit <span class="op">-</span>m <span class="st">&quot;Complete Module 5 governance artifacts&quot;</span></span>
 <span id="cb133-3"><a href="#cb133-3" aria-hidden="true" tabindex="-1"></a>git push <span class="op">-</span>u origin module-5-ai-governance</span></code></pre></div>
 <h2 id="module-5-wiki-update">74. Module 5 Wiki Update</h2>
-<div class="sourceCode" id="cb134"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\wiki-source\Module-5---AI-Governance<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb134"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\wiki-source\Module-5---AI-Governance<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Add:</p>
-<div class="sourceCode" id="cb135"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb135-1"><a href="#cb135-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 5 - AI Governance</span></span>
+<div class="sourceCode" id="cb135"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb135-1"><a href="#cb135-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 5 - AI Governance</span></span>
 <span id="cb135-2"><a href="#cb135-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb135-3"><a href="#cb135-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## What I Learned</span></span>
 <span id="cb135-4"><a href="#cb135-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1952,12 +2071,10 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb135-1"
 <span id="cb135-16"><a href="#cb135-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Unit-level acceptable use guideline</span>
 <span id="cb135-17"><a href="#cb135-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Safety and privacy repository language</span></code></pre></div>
 <p>Publish:</p>
-<div class="sourceCode" id="cb136"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb136-1"><a href="#cb136-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\publish-wiki<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
+<div class="sourceCode" id="cb136"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb136-1"><a href="#cb136-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\publish-wiki<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
 <h2 id="module-5-discussion-post">75. Module 5 Discussion Post</h2>
 <p>Create <code>forum-post-module-5.md</code>:</p>
-<div class="sourceCode" id="cb137"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb137-1"><a href="#cb137-1" aria-hidden="true" tabindex="-1"></a>For Module 5, I focused on turning AI governance principles into practical safeguards for accessibility workflows. The key governance issue in my capstone is not whether AI can draft useful guidance. It is whether the workflow prevents overtrust, protects privacy, avoids bias, and keeps responsibility with people.</span>
+<div class="sourceCode" id="cb137"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb137-1"><a href="#cb137-1" aria-hidden="true" tabindex="-1"></a>For Module 5, I focused on turning AI governance principles into practical safeguards for accessibility workflows. The key governance issue in my capstone is not whether AI can draft useful guidance. It is whether the workflow prevents overtrust, protects privacy, avoids bias, and keeps responsibility with people.</span>
 <span id="cb137-2"><a href="#cb137-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb137-3"><a href="#cb137-3" aria-hidden="true" tabindex="-1"></a>My emerging acceptable-use boundary is this: AI can support low-risk drafting, plain-language rewriting, checklist creation, and learning activities using public or sanitized content. It should not make final accessibility, legal, accommodation, or compliance decisions.</span>
 <span id="cb137-4"><a href="#cb137-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1965,8 +2082,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb137-1"
 <span id="cb137-6"><a href="#cb137-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb137-7"><a href="#cb137-7" aria-hidden="true" tabindex="-1"></a>Peer question: What is one AI use in your area that should be allowed with guardrails, and one use that should remain off limits?</span></code></pre></div>
 <p>Optional CLI post:</p>
-<div class="sourceCode" id="cb138"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb138-1"><a href="#cb138-1" aria-hidden="true" tabindex="-1"></a>gh discussion create `</span>
+<div class="sourceCode" id="cb138"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb138-1"><a href="#cb138-1" aria-hidden="true" tabindex="-1"></a>gh discussion create `</span>
 <span id="cb138-2"><a href="#cb138-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>repo UA-AI2S<span class="op">/</span>AI-Champions `</span>
 <span id="cb138-3"><a href="#cb138-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>category <span class="st">&quot;General&quot;</span> `</span>
 <span id="cb138-4"><a href="#cb138-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>title <span class="st">&quot;Module 5: Governance Guardrails for Accessibility Workflows&quot;</span> `</span>
@@ -1995,15 +2111,13 @@ evaluation metrics, and next steps.</p>
 ├── final-capstone-summary.md
 └── forum-post-module-6.md</code></pre>
 <h2 id="module-6-cli-setup">79. Module 6 CLI Setup</h2>
-<div class="sourceCode" id="cb140"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb140-1"><a href="#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
+<div class="sourceCode" id="cb140"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb140-1"><a href="#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
 <span id="cb140-2"><a href="#cb140-2" aria-hidden="true" tabindex="-1"></a>git checkout <span class="op">-</span>b module-6-campus-champion</span>
 <span id="cb140-3"><a href="#cb140-3" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">06</span><span class="op">-</span>module-campus-champion <span class="op">--</span>profile <span class="st">&quot;AI Campus Champions&quot;</span></span></code></pre></div>
 <h2 id="module-6-initiative-design-canvas">80. Module 6 Initiative
 Design Canvas</h2>
 <p>Create <code>initiative-design-canvas.md</code>:</p>
-<div class="sourceCode" id="cb141"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb141-1"><a href="#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># GLOW Accessibility Champion Lab Initiative Design Canvas</span></span>
+<div class="sourceCode" id="cb141"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb141-1"><a href="#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># GLOW Accessibility Champion Lab Initiative Design Canvas</span></span>
 <span id="cb141-2"><a href="#cb141-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb141-3"><a href="#cb141-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Problem</span></span>
 <span id="cb141-4"><a href="#cb141-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -2058,8 +2172,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb141-1"
 <h2 id="module-6-stakeholder-communication">81. Module 6 Stakeholder
 Communication</h2>
 <p>Create <code>stakeholder-communication.md</code>:</p>
-<div class="sourceCode" id="cb142"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb142-1"><a href="#cb142-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Stakeholder Communication</span></span>
+<div class="sourceCode" id="cb142"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb142-1"><a href="#cb142-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Stakeholder Communication</span></span>
 <span id="cb142-2"><a href="#cb142-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb142-3"><a href="#cb142-3" aria-hidden="true" tabindex="-1"></a>Subject: Introducing the GLOW Accessibility Champion Lab</span>
 <span id="cb142-4"><a href="#cb142-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -2073,8 +2186,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb142-1"
 <h2 id="module-6-peer-review-template">82. Module 6 Peer Review
 Template</h2>
 <p>Create <code>peer-review-template.md</code>:</p>
-<div class="sourceCode" id="cb143"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb143-1"><a href="#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Peer Review Template</span></span>
+<div class="sourceCode" id="cb143"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb143-1"><a href="#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Peer Review Template</span></span>
 <span id="cb143-2"><a href="#cb143-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb143-3"><a href="#cb143-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Project Reviewed</span></span>
 <span id="cb143-4"><a href="#cb143-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -2120,8 +2232,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb143-1"
 <h2 id="module-6-90-day-action-plan">83. Module 6 90-Day Action
 Plan</h2>
 <p>Create <code>ninety-day-action-plan.md</code>:</p>
-<div class="sourceCode" id="cb144"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb144-1"><a href="#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># 90-Day GLOW Accessibility Champion Lab Action Plan</span></span>
+<div class="sourceCode" id="cb144"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb144-1"><a href="#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># 90-Day GLOW Accessibility Champion Lab Action Plan</span></span>
 <span id="cb144-2"><a href="#cb144-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb144-3"><a href="#cb144-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Days 1–15: Prepare</span></span>
 <span id="cb144-4"><a href="#cb144-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -2154,8 +2265,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb144-1"
 <h2 id="module-6-final-capstone-summary">84. Module 6 Final Capstone
 Summary</h2>
 <p>Create <code>final-capstone-summary.md</code>:</p>
-<div class="sourceCode" id="cb145"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb145-1"><a href="#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Final Capstone Summary</span></span>
+<div class="sourceCode" id="cb145"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb145-1"><a href="#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Final Capstone Summary</span></span>
 <span id="cb145-2"><a href="#cb145-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb145-3"><a href="#cb145-3" aria-hidden="true" tabindex="-1"></a>The GLOW Accessibility Champion Lab is a human-centered responsible-AI adoption initiative for scalable accessibility practice. It addresses a persistent capacity problem: accessibility does not scale when specialists are expected to fix every document, communication, course item, slide deck, and web issue. Sustainable accessibility requires helping partners understand patterns, build confidence, and take appropriate responsibility.</span>
 <span id="cb145-4"><a href="#cb145-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -2168,22 +2278,17 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb145-1"
 <span id="cb145-11"><a href="#cb145-11" aria-hidden="true" tabindex="-1"></a>The Accessing Higher Ground workshop in October 2026 becomes the public implementation milestone. The workshop will test and scale the model with a broader accessibility community while preserving the core message: everyone has a role in the accessibility journey, and with the right guidance, everyone can GLOW.</span></code></pre></div>
 <h2 id="module-6-cli-review">85. Module 6 CLI Review</h2>
 <p>Search for missing safeguards:</p>
-<div class="sourceCode" id="cb146"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb146-1"><a href="#cb146-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;human review|privacy|bias|sanitized|legal|accommodation|compliance&quot;</span> <span class="op">.</span>\<span class="dv">06</span><span class="op">-</span>module-campus-champion</span></code></pre></div>
+<div class="sourceCode" id="cb146"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb146-1"><a href="#cb146-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;human review|privacy|bias|sanitized|legal|accommodation|compliance&quot;</span> <span class="op">.</span>\<span class="dv">06</span><span class="op">-</span>module-campus-champion</span></code></pre></div>
 <p>Search for placeholders:</p>
-<div class="sourceCode" id="cb147"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb147-1"><a href="#cb147-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;TODO|TBD|\[insert|VERIFY&quot;</span> <span class="op">.</span>\<span class="dv">06</span><span class="op">-</span>module-campus-champion</span></code></pre></div>
+<div class="sourceCode" id="cb147"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb147-1"><a href="#cb147-1" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;TODO|TBD|\[insert|VERIFY&quot;</span> <span class="op">.</span>\<span class="dv">06</span><span class="op">-</span>module-campus-champion</span></code></pre></div>
 <p>Commit:</p>
-<div class="sourceCode" id="cb148"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb148-1"><a href="#cb148-1" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span>\<span class="dv">06</span><span class="op">-</span>module-campus-champion</span>
+<div class="sourceCode" id="cb148"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb148-1"><a href="#cb148-1" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span>\<span class="dv">06</span><span class="op">-</span>module-campus-champion</span>
 <span id="cb148-2"><a href="#cb148-2" aria-hidden="true" tabindex="-1"></a>git commit <span class="op">-</span>m <span class="st">&quot;Complete Module 6 campus champion initiative package&quot;</span></span>
 <span id="cb148-3"><a href="#cb148-3" aria-hidden="true" tabindex="-1"></a>git push <span class="op">-</span>u origin module-6-campus-champion</span></code></pre></div>
 <h2 id="module-6-wiki-update">86. Module 6 Wiki Update</h2>
-<div class="sourceCode" id="cb149"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb149-1"><a href="#cb149-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\wiki-source\Module-6---AI-Campus-Champion-Initiative<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
+<div class="sourceCode" id="cb149"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb149-1"><a href="#cb149-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\wiki-source\Module-6---AI-Campus-Champion-Initiative<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Add:</p>
-<div class="sourceCode" id="cb150"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb150-1"><a href="#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 6 - AI Campus Champion Initiative</span></span>
+<div class="sourceCode" id="cb150"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb150-1"><a href="#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Module 6 - AI Campus Champion Initiative</span></span>
 <span id="cb150-2"><a href="#cb150-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb150-3"><a href="#cb150-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## What I Learned</span></span>
 <span id="cb150-4"><a href="#cb150-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -2202,12 +2307,10 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb150-1"
 <span id="cb150-17"><a href="#cb150-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Revised concept map notes</span>
 <span id="cb150-18"><a href="#cb150-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Final capstone summary</span></code></pre></div>
 <p>Publish:</p>
-<div class="sourceCode" id="cb151"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb151-1"><a href="#cb151-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\publish-wiki<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
+<div class="sourceCode" id="cb151"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb151-1"><a href="#cb151-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\publish-wiki<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
 <h2 id="module-6-discussion-post">87. Module 6 Discussion Post</h2>
 <p>Create <code>forum-post-module-6.md</code>:</p>
-<div class="sourceCode" id="cb152"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb152-1"><a href="#cb152-1" aria-hidden="true" tabindex="-1"></a>My capstone is the GLOW Accessibility Champion Lab, a human-centered responsible-AI initiative for scalable accessibility practice.</span>
+<div class="sourceCode" id="cb152"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb152-1"><a href="#cb152-1" aria-hidden="true" tabindex="-1"></a>My capstone is the GLOW Accessibility Champion Lab, a human-centered responsible-AI initiative for scalable accessibility practice.</span>
 <span id="cb152-2"><a href="#cb152-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb152-3"><a href="#cb152-3" aria-hidden="true" tabindex="-1"></a>The problem is that accessibility does not scale when specialists are expected to fix everything. The initiative uses the GLOW framework: Ground the work in a real accessibility problem, Learn what people need to understand, Organize a repeatable workflow, and Walk forward as accessibility champions.</span>
 <span id="cb152-4"><a href="#cb152-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -2217,8 +2320,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb152-1"
 <span id="cb152-8"><a href="#cb152-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb152-9"><a href="#cb152-9" aria-hidden="true" tabindex="-1"></a>Peer question: What would make an AI champion initiative feel trustworthy enough for colleagues in your unit to actually use it?</span></code></pre></div>
 <p>Optional CLI post:</p>
-<div class="sourceCode" id="cb153"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb153-1"><a href="#cb153-1" aria-hidden="true" tabindex="-1"></a>gh discussion create `</span>
+<div class="sourceCode" id="cb153"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb153-1"><a href="#cb153-1" aria-hidden="true" tabindex="-1"></a>gh discussion create `</span>
 <span id="cb153-2"><a href="#cb153-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>repo UA-AI2S<span class="op">/</span>AI-Champions `</span>
 <span id="cb153-3"><a href="#cb153-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>category <span class="st">&quot;General&quot;</span> `</span>
 <span id="cb153-4"><a href="#cb153-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>title <span class="st">&quot;Module 6: GLOW Accessibility Champion Lab Initiative&quot;</span> `</span>
@@ -2229,8 +2331,7 @@ Scripts, and Automation</h1>
 <h2 id="reusable-accessibility-agent-formula">88. Reusable Accessibility
 Agent Formula</h2>
 <p>Create <code>templates/accessibility-agent-formula.md</code>:</p>
-<div class="sourceCode" id="cb154"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb154-1"><a href="#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Accessibility Agent Formula</span></span>
+<div class="sourceCode" id="cb154"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb154-1"><a href="#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Accessibility Agent Formula</span></span>
 <span id="cb154-2"><a href="#cb154-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb154-3"><a href="#cb154-3" aria-hidden="true" tabindex="-1"></a>Accessibility Agent = Role + Task + Trusted Guidance + Output Format + Human Review</span>
 <span id="cb154-4"><a href="#cb154-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -2271,8 +2372,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb154-1"
 <span id="cb154-39"><a href="#cb154-39" aria-hidden="true" tabindex="-1"></a>Example: accuracy, institutional context, policy, privacy, tone, and accessibility quality.</span></code></pre></div>
 <h2 id="human-review-checklist">89. Human Review Checklist</h2>
 <p>Create <code>templates/human-review-checklist.md</code>:</p>
-<div class="sourceCode" id="cb155"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb155-1"><a href="#cb155-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Human Review Checklist</span></span>
+<div class="sourceCode" id="cb155"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb155-1"><a href="#cb155-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Human Review Checklist</span></span>
 <span id="cb155-2"><a href="#cb155-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb155-3"><a href="#cb155-3" aria-hidden="true" tabindex="-1"></a>Before using AI-assisted accessibility guidance, confirm:</span>
 <span id="cb155-4"><a href="#cb155-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -2288,8 +2388,7 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb155-1"
 <span id="cb155-14"><a href="#cb155-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Disclosure was considered if AI materially shaped the output.</span></code></pre></div>
 <h2 id="weekly-closeout-script">90. Weekly Closeout Script</h2>
 <p>Create <code>tools/weekly-closeout.ps1</code>:</p>
-<div class="sourceCode" id="cb156"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb156-1"><a href="#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="co"># weekly-closeout.ps1</span></span>
+<div class="sourceCode" id="cb156"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb156-1"><a href="#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="co"># weekly-closeout.ps1</span></span>
 <span id="cb156-2"><a href="#cb156-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Screen-reader-friendly weekly repository check.</span></span>
 <span id="cb156-3"><a href="#cb156-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb156-4"><a href="#cb156-4" aria-hidden="true" tabindex="-1"></a><span class="kw">param</span><span class="op">(</span></span>
@@ -2319,15 +2418,13 @@ class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb15
 <span id="cb156-28"><a href="#cb156-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb156-29"><a href="#cb156-29" aria-hidden="true" tabindex="-1"></a><span class="fu">Write-Host</span> <span class="st">&quot;Closeout check complete. Review results above before committing.&quot;</span></span></code></pre></div>
 <p>Run examples:</p>
-<div class="sourceCode" id="cb157"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb157-1"><a href="#cb157-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\weekly-closeout<span class="op">.</span><span class="fu">ps1</span> <span class="op">-</span>ModuleFolder <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations</span>
+<div class="sourceCode" id="cb157"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb157-1"><a href="#cb157-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\weekly-closeout<span class="op">.</span><span class="fu">ps1</span> <span class="op">-</span>ModuleFolder <span class="op">.</span>\<span class="dv">01</span><span class="op">-</span>module-ai-foundations</span>
 <span id="cb157-2"><a href="#cb157-2" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\weekly-closeout<span class="op">.</span><span class="fu">ps1</span> <span class="op">-</span>ModuleFolder <span class="op">.</span>\<span class="dv">02</span><span class="op">-</span>module-generative-ai</span>
 <span id="cb157-3"><a href="#cb157-3" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\weekly-closeout<span class="op">.</span><span class="fu">ps1</span> <span class="op">-</span>ModuleFolder <span class="op">.</span>\<span class="dv">03</span><span class="op">-</span>module-ai-productivity</span></code></pre></div>
 <h2 id="discussion-post-helper-script">91. Discussion Post Helper
 Script</h2>
 <p>Create <code>tools/create-discussion-post.ps1</code>:</p>
-<div class="sourceCode" id="cb158"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb158-1"><a href="#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create-discussion-post.ps1</span></span>
+<div class="sourceCode" id="cb158"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb158-1"><a href="#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create-discussion-post.ps1</span></span>
 <span id="cb158-2"><a href="#cb158-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Posts a module discussion if gh discussion is available and permissions allow it.</span></span>
 <span id="cb158-3"><a href="#cb158-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb158-4"><a href="#cb158-4" aria-hidden="true" tabindex="-1"></a><span class="kw">param</span><span class="op">(</span></span>
@@ -2367,16 +2464,14 @@ class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb15
 <span id="cb158-38"><a href="#cb158-38" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>title <span class="va">$Title</span> `</span>
 <span id="cb158-39"><a href="#cb158-39" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>body-file <span class="va">$BodyFile</span></span></code></pre></div>
 <p>Run example:</p>
-<div class="sourceCode" id="cb159"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb159-1"><a href="#cb159-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\create-discussion-post<span class="op">.</span><span class="fu">ps1</span> `</span>
+<div class="sourceCode" id="cb159"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb159-1"><a href="#cb159-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\create-discussion-post<span class="op">.</span><span class="fu">ps1</span> `</span>
 <span id="cb159-2"><a href="#cb159-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span>Repo <span class="st">&quot;UA-AI2S/AI-Champions&quot;</span> `</span>
 <span id="cb159-3"><a href="#cb159-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span>Category <span class="st">&quot;General&quot;</span> `</span>
 <span id="cb159-4"><a href="#cb159-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span>Title <span class="st">&quot;Module 1: Concept Map and Accessibility Capacity Building&quot;</span> `</span>
 <span id="cb159-5"><a href="#cb159-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span>BodyFile <span class="st">&quot;.\01-module-ai-foundations\forum-post-module-1.md&quot;</span></span></code></pre></div>
 <h2 id="capstone-packaging-script">92. Capstone Packaging Script</h2>
 <p>Create <code>tools/package-capstone.ps1</code>:</p>
-<div class="sourceCode" id="cb160"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb160-1"><a href="#cb160-1" aria-hidden="true" tabindex="-1"></a><span class="co"># package-capstone.ps1</span></span>
+<div class="sourceCode" id="cb160"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb160-1"><a href="#cb160-1" aria-hidden="true" tabindex="-1"></a><span class="co"># package-capstone.ps1</span></span>
 <span id="cb160-2"><a href="#cb160-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Creates a clean capstone package folder.</span></span>
 <span id="cb160-3"><a href="#cb160-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb160-4"><a href="#cb160-4" aria-hidden="true" tabindex="-1"></a><span class="va">$ErrorActionPreference</span> <span class="op">=</span> <span class="st">&quot;Stop&quot;</span></span>
@@ -2410,11 +2505,9 @@ class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb16
 <span id="cb160-32"><a href="#cb160-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb160-33"><a href="#cb160-33" aria-hidden="true" tabindex="-1"></a><span class="fu">Write-Host</span> <span class="st">&quot;Package created: dist/glow-accessibility-champion-lab-capstone.zip&quot;</span></span></code></pre></div>
 <p>Run:</p>
-<div class="sourceCode" id="cb161"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb161-1"><a href="#cb161-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\package-capstone<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
+<div class="sourceCode" id="cb161"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb161-1"><a href="#cb161-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\package-capstone<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
 <p>Optional release creation after review:</p>
-<div class="sourceCode" id="cb162"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb162-1"><a href="#cb162-1" aria-hidden="true" tabindex="-1"></a>gh release create capstone-v1<span class="op">.</span><span class="dv">0</span> <span class="op">.</span>\dist\glow-accessibility-champion-lab-capstone<span class="op">.</span><span class="fu">zip</span> `</span>
+<div class="sourceCode" id="cb162"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb162-1"><a href="#cb162-1" aria-hidden="true" tabindex="-1"></a>gh release create capstone-v1<span class="op">.</span><span class="dv">0</span> <span class="op">.</span>\dist\glow-accessibility-champion-lab-capstone<span class="op">.</span><span class="fu">zip</span> `</span>
 <span id="cb162-2"><a href="#cb162-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>title <span class="st">&quot;GLOW Accessibility Champion Lab Capstone v1.0&quot;</span> `</span>
 <span id="cb162-3"><a href="#cb162-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>notes-file <span class="op">.</span>\<span class="dv">06</span><span class="op">-</span>module-campus-champion\final-capstone-summary<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Only create a release if the repository and package have been
@@ -2706,35 +2799,28 @@ sanitized.</p>
 <h2 id="final-repository-closeout-commands">94. Final Repository
 Closeout Commands</h2>
 <p>Run these at the end of the six weeks:</p>
-<div class="sourceCode" id="cb163"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb163-1"><a href="#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
+<div class="sourceCode" id="cb163"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb163-1"><a href="#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span> C<span class="op">:</span>\code\glow-accessibility-champion-lab</span>
 <span id="cb163-2"><a href="#cb163-2" aria-hidden="true" tabindex="-1"></a>git checkout main</span>
 <span id="cb163-3"><a href="#cb163-3" aria-hidden="true" tabindex="-1"></a>git pull</span>
 <span id="cb163-4"><a href="#cb163-4" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;TODO|TBD|VERIFY|PRIVATE|CONFIDENTIAL|\[insert&quot;</span> <span class="op">.</span></span>
 <span id="cb163-5"><a href="#cb163-5" aria-hidden="true" tabindex="-1"></a>rg <span class="st">&quot;human review|privacy|bias|accessibility|sanitized&quot;</span> <span class="op">.</span></span>
 <span id="cb163-6"><a href="#cb163-6" aria-hidden="true" tabindex="-1"></a>git status <span class="op">--</span>short</span></code></pre></div>
 <p>Create final branch:</p>
-<div class="sourceCode" id="cb164"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb164-1"><a href="#cb164-1" aria-hidden="true" tabindex="-1"></a>git checkout <span class="op">-</span>b final-capstone-package</span></code></pre></div>
+<div class="sourceCode" id="cb164"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb164-1"><a href="#cb164-1" aria-hidden="true" tabindex="-1"></a>git checkout <span class="op">-</span>b final-capstone-package</span></code></pre></div>
 <p>Update final files:</p>
-<div class="sourceCode" id="cb165"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb165-1"><a href="#cb165-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">06</span><span class="op">-</span>module-campus-champion\final-capstone-summary<span class="op">.</span><span class="fu">md</span></span>
+<div class="sourceCode" id="cb165"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb165-1"><a href="#cb165-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">06</span><span class="op">-</span>module-campus-champion\final-capstone-summary<span class="op">.</span><span class="fu">md</span></span>
 <span id="cb165-2"><a href="#cb165-2" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\<span class="dv">00</span><span class="op">-</span>capstone-overview\final-package-outline<span class="op">.</span><span class="fu">md</span></span>
 <span id="cb165-3"><a href="#cb165-3" aria-hidden="true" tabindex="-1"></a>code <span class="op">.</span>\ahg-implementation\public-sharing-sanitization-checklist<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <p>Publish wiki:</p>
-<div class="sourceCode" id="cb166"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb166-1"><a href="#cb166-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\publish-wiki<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
+<div class="sourceCode" id="cb166"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb166-1"><a href="#cb166-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\publish-wiki<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
 <p>Package:</p>
-<div class="sourceCode" id="cb167"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb167-1"><a href="#cb167-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\package-capstone<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
+<div class="sourceCode" id="cb167"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb167-1"><a href="#cb167-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">.</span>\tools\package-capstone<span class="op">.</span><span class="fu">ps1</span></span></code></pre></div>
 <p>Commit:</p>
-<div class="sourceCode" id="cb168"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb168-1"><a href="#cb168-1" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span></span>
+<div class="sourceCode" id="cb168"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb168-1"><a href="#cb168-1" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span></span>
 <span id="cb168-2"><a href="#cb168-2" aria-hidden="true" tabindex="-1"></a>git commit <span class="op">-</span>m <span class="st">&quot;Finalize GLOW Accessibility Champion Lab capstone package&quot;</span></span>
 <span id="cb168-3"><a href="#cb168-3" aria-hidden="true" tabindex="-1"></a>git push <span class="op">-</span>u origin final-capstone-package</span></code></pre></div>
 <p>Create pull request:</p>
-<div class="sourceCode" id="cb169"><pre
-class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb169-1"><a href="#cb169-1" aria-hidden="true" tabindex="-1"></a>gh pr create `</span>
+<div class="sourceCode" id="cb169"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb169-1"><a href="#cb169-1" aria-hidden="true" tabindex="-1"></a>gh pr create `</span>
 <span id="cb169-2"><a href="#cb169-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>title <span class="st">&quot;Finalize GLOW Accessibility Champion Lab capstone&quot;</span> `</span>
 <span id="cb169-3"><a href="#cb169-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>body-file <span class="op">.</span>\<span class="dv">06</span><span class="op">-</span>module-campus-champion\final-capstone-summary<span class="op">.</span><span class="fu">md</span></span></code></pre></div>
 <hr />
@@ -2773,3 +2859,5 @@ with your leadership style: practical, human-centered, accessible, and
 designed to meet people where they are.</p>
 <p>Everyone has a role in the accessibility journey.</p>
 <p>With the right guidance, everyone can GLOW.</p>
+</body>
+</html>

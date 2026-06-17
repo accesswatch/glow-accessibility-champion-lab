@@ -75,23 +75,23 @@ University of Arizona
 
 # Table of Contents
 
-1.  1\. Executive Framing: What Is the Problem to Be Solved?
+1. 1\. Executive Framing: What Is the Problem to Be Solved?
 
-2.  2\. Workshop Title, Subtitle, and Core Promise
+2. 2\. Workshop Title, Subtitle, and Core Promise
 
-3.  3\. The GLOW Framework
+3. 3\. The GLOW Framework
 
-4.  4\. Revised Session Summary
+4. 4\. Revised Session Summary
 
-5.  5\. Revised Abstract
+5. 5\. Revised Abstract
 
-6.  6\. Intended Audience
+6. 6\. Intended Audience
 
-7.  7\. Learning Outcomes
+7. 7\. Learning Outcomes
 
-8.  8\. One-Day Schedule: Seven Working Hours Plus Lunch
+8. 8\. One-Day Schedule: Seven Working Hours Plus Lunch
 
-9.  9\. Full Facilitator Agenda
+9. 9\. Full Facilitator Agenda
 
 The corrected schedule below runs from 8:30 AM to 4:30 PM with lunch
 from 12:15 PM to 1:15 PM. The scheduled workshop block contains seven
@@ -392,35 +392,35 @@ after the session.
   Export function      Exports selected artifacts to Markdown, Word,
                        JSON, or a reusable workflow library.
 
-  Optional GLOW skill  Allows selected workflows to become future
-  pathway              GLOW skills or Accessibility Agents examples.
+Optional GLOW skill  Allows selected workflows to become future
+  pathway              GLOW skills or Accessibility Agents examples
   ------------------------------------------------------------------
 
 ## Suggested Online Form Flow
 
-10. Accessibility Journey Check-In Form
+1. Accessibility Journey Check-In Form
 
-11. Problem Statement Form
+2. Problem Statement Form
 
-12. Fix It for Me vs. Teach Me to Improve It Form
+3. Fix It for Me vs. Teach Me to Improve It Form
 
-13. Helpful, Risky, or Human Required Form
+4. Helpful, Risky, or Human Required Form
 
-14. Accessibility Agent Formula Form
+5. Accessibility Agent Formula Form
 
-15. GLOW Lab 1 Accessible Communication Submission Form
+6. GLOW Lab 1 Accessible Communication Submission Form
 
-16. GLOW Lab 2 Alt Text Decision Submission Form
+7. GLOW Lab 2 Alt Text Decision Submission Form
 
-17. GLOW Lab 3 Remediation Planning Submission Form
+8. GLOW Lab 3 Remediation Planning Submission Form
 
-18. Accessibility Champion Workflow Submission Form
+9. Accessibility Champion Workflow Submission Form
 
-19. Peer Feedback Form
+10. Peer Feedback Form
 
-20. Capstone Share-Out Form
+11. Capstone Share-Out Form
 
-21. 30-Day GLOW Action Plan Form
+12. 30-Day GLOW Action Plan Form
 
 ## Accessible Gallery Card Structure
 
@@ -486,11 +486,11 @@ to answer individually, then invite brief sharing.
 
 **Participant instructions:**
 
-22. What kind of accessibility work do you do?
+1. What kind of accessibility work do you do?
 
-23. Where do your partners most often get stuck?
+2. Where do your partners most often get stuck?
 
-24. What would change if more people in your organization saw themselves
+3. What would change if more people in your organization saw themselves
     as accessibility champions?
 
 **Participant output:** A set of participant-identified accessibility
@@ -517,13 +517,13 @@ choose a real challenge from their organization.
 
 **Participant instructions:**
 
-25. Name the surface problem.
+1. Name the surface problem.
 
-26. Name the deeper capacity problem.
+2. Name the deeper capacity problem.
 
-27. Identify who needs to learn something.
+3. Identify who needs to learn something.
 
-28. Describe what success would look like if the problem were solved in
+4. Describe what success would look like if the problem were solved in
     a repeatable way.
 
 **Participant output:** A clear problem statement.
@@ -548,13 +548,13 @@ response in a way that preserves kindness while building capacity.
 
 **Participant instructions:**
 
-29. Read the request.
+1. Read the request.
 
-30. Identify the immediate accessibility need.
+2. Identify the immediate accessibility need.
 
-31. Identify what the partner needs to learn.
+3. Identify what the partner needs to learn.
 
-32. Draft a response that helps now and teaches for next time.
+4. Draft a response that helps now and teaches for next time.
 
 **Participant output:** A set of coaching responses.
 
@@ -578,12 +578,12 @@ accessibility tasks.
 
 **Participant instructions:**
 
-33. Classify each task as helpful for AI, risky without review, or human
+1. Classify each task as helpful for AI, risky without review, or human
     required.
 
-34. Explain why.
+2. Explain why.
 
-35. Identify the safeguard needed.
+3. Identify the safeguard needed.
 
 **Participant output:** An AI boundary map.
 
@@ -607,17 +607,17 @@ Output Format + Human Review.
 
 **Participant instructions:**
 
-36. Choose a partner need.
+1. Choose a partner need.
 
-37. Define the role.
+2. Define the role.
 
-38. Define the task.
+3. Define the task.
 
-39. Name the trusted guidance.
+4. Name the trusted guidance.
 
-40. Define the output.
+5. Define the output.
 
-41. Define human review.
+6. Define human review.
 
 **Participant output:** A first accessibility agent concept.
 
@@ -1237,8 +1237,8 @@ into reusable technical assets.
   Accessibility Insights web accessibility testing and evidence
                          gathering.
 
-  Accessibility Agents   A future pathway for contributing reusable
-  repository             agent examples, prompts, and workflows.
+Accessibility Agents   A future pathway for contributing reusable
+  repository             agent examples, prompts, and workflows
   ------------------------------------------------------------------
 
 +----------------------------------------------------------------------+
@@ -1289,11 +1289,11 @@ accessibility champion action plan.
 # Reference Links Mentioned in the Proposal
 
 [[GLOW current site]{.underline}](http://glow.bits-acb.org) -
-http://glow.bits-acb.org
+<http://glow.bits-acb.org>
 
 [[Community Access]{.underline}](https://www.community-access.org) -
-https://www.community-access.org
+<https://www.community-access.org>
 
 [[Planned University of Arizona GLOW
 location]{.underline}](https://glow.accessibility.arizona.edu) -
-https://glow.accessibility.arizona.edu
+<https://glow.accessibility.arizona.edu>

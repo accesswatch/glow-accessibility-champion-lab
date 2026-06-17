@@ -2,7 +2,7 @@
 
 University of Arizona AI Campus Champions capstone — Summer 2026.
 
-**Jeff Bishop** | jeff@jeffbishop.com | [Accessing Higher Ground, October 2026](https://accessinghigherground.org/)
+**Jeff Bishop** | <jeffbis@arizona.edu> | [Accessing Higher Ground, October 2026](https://accessinghigherground.org/)
 
 ---
 
@@ -96,7 +96,7 @@ All AI-assisted content requires human review before use. See `SAFETY.md` and `t
 
 ## PowerShell Tools
 
-Run from the repository root (`D:\glow-accessibility-champion-lab`).
+Run from the repository root (`./\glow-accessibility-champion-lab`).
 
 | Script | Purpose | Example |
 |---|---|---|
@@ -140,6 +140,7 @@ pwsh .\tools\publish-wiki.ps1
 The `wiki-source/` folder contains fourteen polished pages that mirror the GitHub wiki. Pages are published to the wiki using `tools/publish-wiki.ps1`.
 
 **Wiki pages:**
+
 - Home
 - Capstone Overview
 - GLOW Framework
