@@ -3,7 +3,8 @@
 
 $ErrorActionPreference = "Stop"
 
-$repoRoot = Resolve-Path "."
+# Resolve repo root from the script's own location (tools/ is one level down from root)
+$repoRoot = Split-Path $PSScriptRoot -Parent
 $wikiSource = Join-Path $repoRoot "wiki-source"
 
 # Derive wiki clone path from repo remote URL
@@ -14,7 +15,7 @@ if (-not $remoteUrl) {
 
 # Convert SSH or HTTPS URL to wiki clone path convention
 $wikiClone = $remoteUrl -replace "\.git$", ".wiki.git"
-$wikiLocalPath = Join-Path (Split-Path $repoRoot -Parent) "glow-accessibility-champion-lab.wiki"
+$wikiLocalPath = Join-Path (Split-Path $repoRoot -Parent) "$((Split-Path $repoRoot -Leaf)).wiki"
 
 if (-not (Test-Path $wikiSource)) {
   throw "wiki-source folder not found at $wikiSource"
@@ -36,7 +37,7 @@ try {
   git status --short
   git add .
   git commit -m "Update GLOW capstone wiki pages"
-  git push
+  git push --set-upstream origin main
 }
 finally {
   Pop-Location
