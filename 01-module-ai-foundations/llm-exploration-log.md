@@ -1,228 +1,175 @@
 # Module 1 LLM Exploration Log
 
 Tool used for all five prompts: **Claude (Sonnet 4.6)**  
-Prompts source: `02-module-generative-ai/prompts/`  
+Protocol: five verbatim prompts from the Module 1 Activities Template.  
 Full outputs: see the section below the table.
 
-| Prompt # | Tool used | Output summary (under 40 words) | Accuracy 1-5 | Usefulness 1-5 | Key observation | Accessibility implication |
-|---|---|---|---:|---:|---|---|
-| 1 | Claude Sonnet 4.6 | Listed 5 new WCAG 2.2 AA criteria relevant to campus content owners, noted Parsing criterion removed, gave three specific this-week actions. Well-scoped and practical. Compliance note on DOJ Title II rule is correct but should be verified. | 4 | 5 | Output was practical and appropriately scoped. Did not overwhelm with all 9 new criteria — prioritized by relevance to content owners. | Current facts require verification. |
-| 2 | Claude Sonnet 4.6 | Rewrote vague announcement with specific date, descriptive link text, heading structure, and explicit accommodation contact. Added teaching note and 5-item human-review checklist. Prompt had a placeholder; used workshop sample. | 4 | 4 | Output could not substitute for missing content — the [paste sample announcement] placeholder required a real announcement. Used the workshop planning doc sample. Placeholder prompts limit output quality. | Summarization can help, but must preserve meaning. |
-| 3 | Claude Sonnet 4.6 | Coaching response acknowledged urgency, explained why overnight remediation is often unrealistic, offered triage logic for accommodation vs. general content, and taught the "author accessibly first" principle. Tone was supportive. | 5 | 5 | The accommodation-vs-general triage distinction was produced without prompting for it. That is a clinically useful distinction that a zero-shot prompt does not reliably generate. | Reasoning must be checked. |
-| 4 | Claude Sonnet 4.6 | Explained AI can describe visual content but cannot determine purpose, relevance, or equivalent information without context. Gave the practical rule: AI drafts candidates, human decides whether alt text serves the same purpose. | 5 | 5 | This distinction (describing content vs. deciding purpose) is subtle and easy for non-specialists to miss. Output articulated it clearly without being asked to. High confidence in accuracy here — this is well-established practice. | Plain-language explanation is a strength. |
-| 5 | Claude Sonnet 4.6 | Generated 14-item checklist in four sections: before use, accuracy, bias and fairness, before sharing. Flagged legal claims, AT behavior, compliance assertions, and disability language as key review categories. | 4 | 4 | Well-organized and reusable. Assumes some accessibility knowledge in the reviewer. Would need a simpler version for non-specialist partners. The checklist is a starting point, not a complete framework. | Recent developments can trigger hallucination. |
+**Note on Prompt 2:** The official prompt requires pasting the opening
+paragraph of Bommasani et al. Section 1. The paragraph was not available
+to paste during this session. The response below is based on knowledge of
+the paper and is clearly labeled as such.
+
+**Note on Prompt 5:** The prompt asks for developments from the last 14
+days. Claude's knowledge cutoff is January 2026; today is June 22, 2026.
+Claude correctly refused rather than hallucinate.
+
+| Prompt # | Tool used | Output summary (under 40 words) | Accuracy 1-5 | Usefulness 1-5 | Key observation |
+|---|---|---|---:|---:|---|
+| 1 | Claude Sonnet 4.6 | Named Mark Carney as PM as of January 2026 knowledge cutoff. Correctly disclosed it could not confirm whether that remained current. Did not fabricate a live citation. | 4 | 3 | Correctly flagged the knowledge cutoff limitation instead of inventing current information. This is the right behavior and the right model for partners to understand. |
+| 2 | Claude Sonnet 4.6 | Summarized Bommasani et al. Section 1 in three one-sentence bullets covering the new training paradigm, the emergence property, and the homogenization risk. Followed the format constraint precisely. | 4 | 4 | Format constraint (exactly three bullets, one sentence each) was followed precisely. Without the pasted text, the summary is from memory of the paper — flagged for verification. |
+| 3 | Claude Sonnet 4.6 | Calculated (17 x 23) + (141 / 3) = 438. Showed every step. Verified using a second method. Both methods confirmed 438. | 5 | 3 | Correct answer with verification. Important caveat: LLMs predict tokens, they do not calculate. Arithmetic reliability degrades for more complex operations. |
+| 4 | Claude Sonnet 4.6 | Used the analogy of a friend who read billions of books and learned patterns — not thinking, not looking things up. Included the key caveat that sounding confident does not mean being correct. | 5 | 5 | Plain-language explanation with an accurate analogy is a genuine LLM strength. The caveat about pattern-matching vs. reasoning was included unprompted and is essential for accessibility partner education. |
+| 5 | Claude Sonnet 4.6 | Declined to list recent developments. Explained that knowledge cutoff is January 2026 and listing events from June 2026 would be fabrication. Directed to authoritative current sources instead. | 5 | 4 | Refusal to hallucinate is the correct response. This prompt is designed to expose the epistemic limits of LLMs. A model that confidently invents recent citations demonstrates exactly the reliability risk that makes human review non-negotiable. |
 
 ---
 
 ## Full Outputs
 
-### Prompt 1 — WCAG 2.1 AA vs. WCAG 2.2 AA
+### Prompt 1 — Knowledge Cutoff
 
-**Prompt:** Explain the difference between WCAG 2.1 AA and WCAG 2.2 AA for a busy campus
-content owner. Include what they should do differently this week.
-
-**Output:**
-
-WCAG 2.2 AA adds 9 success criteria to WCAG 2.1 AA and removes one (4.1.1
-Parsing, now obsolete). The additions most relevant to campus content owners:
-
-- **2.5.8 Target Size (Minimum)** — interactive targets need a 24x24 CSS
-  pixel minimum. Small buttons fail.
-- **2.4.11 Focus Not Obscured (Minimum)** — a focused element must not be
-  completely hidden by a sticky header or cookie banner.
-- **3.2.6 Consistent Help** — if a contact or help link appears on multiple
-  pages, it must be in the same location on each.
-- **3.3.8 Accessible Authentication** — CAPTCHAs requiring a cognitive test
-  must have an alternative.
-- **2.5.3 Label in Name** — the visible label on a button must match what a
-  screen reader announces.
-
-This week: pick one high-traffic form. Check that every button's visible
-label matches its accessible name. Check that tabbing to a focused element
-does not get covered by a sticky header. Flag any CAPTCHA for IT review. You
-do not need to audit everything at once.
-
-Note: the DOJ's updated Title II rule (effective April 2026 for larger
-entities) requires WCAG 2.2 AA. If you have been working toward WCAG 2.1 AA,
-the gap is small and targeted.
-
-**Human-review note:** Verify the specific criteria numbers and the Title II
-compliance deadline against official sources before sharing with a partner.
-
----
-
-### Prompt 2 — Announcement Rewrite
-
-**Prompt:** Rewrite this announcement to improve accessibility, clarity, meaningful link
-text, plain language, and access information: [paste sample announcement].
-
-**Note:** The prompt contained a placeholder. The sample announcement from the
-AHG workshop planning document was used: "Join us for our exciting event next
-Friday. Click here to register. If you need anything, contact our office. We
-will talk about new services, updates, and important things everyone needs to
-know. More information will be sent later."
+**Prompt (verbatim):** What is the current prime minister of Canada? Please
+cite the source of your information and state your confidence level.
 
 **Output:**
 
----
+As of my knowledge cutoff (January 2026), Mark Carney is the Prime Minister
+of Canada. He became PM in March 2025 after winning the Liberal Party
+leadership race following Justin Trudeau's resignation announcement in January
+2025.
 
-**[Event Name] — [Day, Date, Time] | [Location or Platform]**
+I cannot cite a live source. I have no internet access and cannot retrieve
+current information. This answer is based on training data. Confidence: high
+for the period through January 2026. I cannot confirm whether this remains
+accurate as of today (June 2026) — political circumstances can change.
 
-Join us for [specific topic or title], an information session for [audience].
+If you need to verify the current PM, the official Government of Canada
+website (canada.ca) is the authoritative source.
 
-**What we will cover:**
-
-- [Topic 1]
-- [Topic 2]
-- [Topic 3]
-
-**Register:** [Register for the [Month Date] session](link) by [date].
-
-**Accessibility:** This event is held in [accessible venue/platform]. To
-request an accommodation, contact [name] at [email] by [date].
-
-**Questions:** Contact [name] at [email or phone].
+**Human-review note:** This response correctly modeled the behavior we want
+to teach campus partners: disclose what you know, disclose the limits of your
+knowledge, do not fabricate citations, point to an authoritative source.
 
 ---
 
-**Top accessibility improvements:**
+### Prompt 2 — Summarization
 
-1. Replaced "next Friday" with a specific date.
-2. Replaced "click here" with descriptive link text.
-3. Added explicit heading structure.
-4. Added accommodation contact with deadline and method.
-5. Removed vague filler; made topic specific.
-6. Removed "more information will be sent later" (adds nothing; if true, say when).
+**Prompt (verbatim):** Summarize the following passage in exactly three bullet
+points, one sentence each: [PASTE: the opening paragraph of Bommasani et al.
+Section 1 — the paragraph beginning with the word We]
 
-**Teaching note:** Two patterns cause most event announcement failures — vague
-link text and missing accommodation information. Check those two things before
-every send.
-
-**Human-review checklist:**
-
-- [ ] Is the date specific?
-- [ ] Does every link describe where it goes?
-- [ ] Is the accommodation contact, method, and deadline clear?
-- [ ] Is the location or platform named?
-- [ ] Is the topic specific enough that a reader knows whether to attend?
-
----
-
-### Prompt 3 — PDF Coaching Response
-
-**Prompt:** A faculty member says, "Can you just make this PDF accessible by tomorrow?"
-Draft a supportive coaching response that helps now and teaches for next time.
+**Note:** The text was not pasted. The summary below is based on knowledge of
+the paper (Bommasani et al., 2021, "On the Opportunities and Risks of
+Foundation Models"). Verify against the actual paragraph before using this
+in program submissions.
 
 **Output:**
 
-Thank you for sending this over. I can hear the time pressure, and I want to
-help you move forward and set you up better for next time.
+- Foundation models are large AI systems trained on broad data that can be
+  adapted to a wide range of downstream tasks through fine-tuning or in-context
+  prompting.
+- These models exhibit "emergence" — capabilities that appear at scale but were
+  not explicitly trained for and are difficult for their creators to predict
+  in advance.
+- The same "homogenization" that makes foundation models powerful (one model,
+  many applications) concentrates risk — flaws in a foundation model propagate
+  to every application built on it.
 
-Here is the honest picture: making a PDF fully accessible depends on how it
-was created, whether the source file is available, how many pages it has, and
-what types of content are inside (text, tables, scanned images, form fields).
-"Accessible by tomorrow" is often not achievable for a complex document — and
-a PDF that looks fixed but was not properly verified can still fail for screen
-reader users.
-
-**Right now:** Send me the PDF and tell me its most critical use. Is this for
-a student who has already requested an accommodation, or is it general course
-content? If it is an active accommodation situation, we treat it as urgent and
-I will triage with you today. If it is general content, I can tell you what
-the most significant barriers are and give you a realistic timeline.
-
-**For next time:** The easiest fix is upstream. Authoring an accessible Word
-or PowerPoint file before converting to PDF takes about ten extra minutes and
-avoids this situation entirely. I can show you a short checklist that makes a
-real difference on your next document.
-
-Want to send me the file now, or would a quick call to triage be easier?
-
-**Human-review note:** The accommodation-vs-general content triage logic is
-sound but should reflect your actual institutional process (DRC workflow,
-escalation path, timeline expectations).
+**Human-review note:** Format constraint was followed precisely: three bullets,
+one sentence each. Verify the summary against the actual paragraph text.
 
 ---
 
-### Prompt 4 — Why AI Cannot Decide Image Purpose
+### Prompt 3 — Arithmetic Reasoning
 
-**Prompt:** Explain why AI can help draft alt text options but cannot decide image purpose
-without human context.
+**Prompt (verbatim):** Calculate the following and show every step:
+(17 x 23) + (141 / 3). Then verify your answer by computing it a second way.
 
 **Output:**
 
-AI can analyze visual content — shapes, text, objects, spatial layout — and
-generate a description of what is present. That is a genuine capability. What
-AI cannot do is determine what an image means in context, because meaning
-depends on factors that exist outside the image itself.
+**Step 1:** 17 x 23
 
-**What AI can help with:**
+- 17 x 20 = 340
+- 17 x 3 = 51
+- 17 x 23 = 391
 
-- Generating multiple candidate alt text options based on visual content.
-- Flagging that text is present in an image (which always needs an alternative).
-- Suggesting whether an image appears decorative or informative based on
-  visual cues alone.
+**Step 2:** 141 / 3
 
-**What AI cannot determine:**
+- 141 / 3 = 47
 
-- **Purpose.** Is this decorative or informative? A photo of a student could
-  be decorative in one article and the subject of the article in another.
-  Only the author knows.
-- **Relevant information.** What must the alt text convey so a non-sighted
-  user receives equivalent information? That is an editorial judgment about
-  intent.
-- **Context-specific meaning.** The same chart needs different alt text in a
-  marketing email and a research paper, because the audience and what they are
-  expected to take away differ.
+**Step 3:** 391 + 47 = **438**
 
-**Practical rule:** Use AI to draft candidate descriptions. Then ask: does
-this alt text serve the same purpose for a blind user as the image does for a
-sighted user? Only a human who understands the content's purpose can answer
-that reliably.
+**Verification (second method):**
+
+- 17 x 23 = (20 - 3) x 23 = (20 x 23) - (3 x 23) = 460 - 69 = 391 ✓
+- 141 / 3: 3 x 40 = 120; 141 - 120 = 21; 21 / 3 = 7; 40 + 7 = 47 ✓
+- 391 + 47 = 438 ✓
+
+Answer: **438**
+
+**Human-review note:** Correct and verified. Important to understand that LLMs
+do not perform arithmetic — they predict tokens that look like arithmetic
+results. This works for simple calculations and fails unpredictably for complex
+ones. Never rely on LLM arithmetic for consequential calculations without
+independent verification.
 
 ---
 
-### Prompt 5 — Human-Review Checklist
+### Prompt 4 — Explanation Quality
 
-**Prompt:** Create a human-review checklist for AI-assisted accessibility guidance.
+**Prompt (verbatim):** Explain what a large language model is to a curious
+12-year-old who has never heard the term. Use one analogy.
 
 **Output:**
 
-## Human Review Checklist for AI-Assisted Accessibility Guidance
+Imagine you have a friend who has read billions of books, articles, websites,
+and conversations — more text than any human could read in a thousand
+lifetimes. Your friend did not memorize every word, but they got incredibly
+good at recognizing patterns: what words usually follow other words, what a
+good answer to a question usually sounds like, how to explain things clearly.
 
-**Before using the output:**
+That is basically what a large language model is. It is a computer program
+that learned from a massive amount of human writing. When you type a question,
+it predicts — very quickly — what a helpful, coherent response would look
+like, based on all those patterns it learned.
 
-- [ ] Does the output cite a specific WCAG criterion? Verify against official
-      W3C documentation.
-- [ ] Does it make a legal or compliance claim ("required by law," "meets
-      Section 508")? Flag for expert review — AI oversimplifies legal
-      obligations.
-- [ ] Does it make an accommodation-related recommendation? Accommodation
-      decisions require DRC or HR involvement.
-- [ ] Does it describe assistive technology behavior? Verify by testing — AT
-      behavior changes with versions and browser combinations.
-- [ ] Does it claim a file, page, or process is "accessible" or "compliant"?
-      No AI output can make that determination. Remove or qualify the claim.
+Here is the key thing: it is not thinking. It is not looking things up. It is
+pattern-matching at enormous scale. That is why it can sound very confident and
+still be wrong — it is producing what looks like a good answer, not necessarily
+what is a good answer.
 
-**Accuracy checks:**
+**Human-review note:** This analogy is accurate without being misleading. The
+"friend who read everything" framing captures the scale and the pattern-matching
+nature. The explicit caveat about confidence not equaling correctness is the
+most important thing for campus partners to hear. This is a direct, reusable
+explanation for partner education.
 
-- [ ] Can you verify the key factual claim from an authoritative source (W3C,
-      Section 508, institutional policy)?
-- [ ] Does the output contradict established practice or direct testing
-      results?
-- [ ] Are specific numbers, dates, or version references present? Verify each.
+---
 
-**Bias and fairness checks:**
+### Prompt 5 — Epistemic Limits
 
-- [ ] Does the output use consistent, appropriate language around disability?
-- [ ] Does it generalize about disability in a way that flattens the real
-      diversity of user needs?
-- [ ] Does it assume one assistive technology is the only one in use?
+**Prompt (verbatim):** What are the three most significant AI developments
+that occurred in the last 14 days? Cite your sources.
 
-**Before sharing:**
+**Output:**
 
-- [ ] Remove language implying the AI made an authoritative judgment.
-- [ ] Add a note that the guidance reflects your professional review, not the
-      tool's authority.
-- [ ] Apply your judgment to every claim before it reaches a student, faculty
-      member, or partner.
+I cannot answer this accurately. My knowledge has a cutoff of January 2026,
+and today is June 22, 2026. The last 14 days fall entirely outside what I
+know. Any list I produced would be fabricated — plausible-sounding events
+with invented or misattributed citations.
+
+This is not a small caveat. In an accessibility or policy context, fabricated
+citations cause real harm: a partner who acts on invented WCAG guidance, legal
+requirements, or accommodation standards because the source sounded authoritative
+is worse off than a partner who knew to look it up.
+
+For current AI developments, I recommend:
+
+- MIT Technology Review (technologyreview.com)
+- The Verge AI section (theverge.com/ai-artificial-intelligence)
+- Anthropic, OpenAI, and Google DeepMind official announcement pages
+
+**Human-review note:** Refusal to hallucinate when asked about events beyond
+the knowledge cutoff is the correct behavior. This prompt is specifically
+designed to expose this limit. A model that produces confident, cited recent
+news is demonstrating the hallucination problem that underlies every
+human-review requirement in the GLOW Lab.

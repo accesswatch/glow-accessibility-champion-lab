@@ -13,3 +13,6 @@ dist/
 # Generated HTML (pandoc twins built from Markdown by
 # tools/Fix-Markdown-And-ExportHtml.ps1). Build output, not source.
 *.html
+
+# Node dependencies (local tool installs).
+node_modules/

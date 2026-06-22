@@ -4,26 +4,43 @@ flowchart TD
         A concept map for Module 1. A single technical spine runs from
         Artificial Intelligence to Machine Learning to Deep Learning to
         Neural Networks to Large Language Models to Foundation Models to
-        Generative AI. Generative AI produces accessibility drafts and
+        Generative AI, with each step representing a narrower subset or
+        application. Generative AI produces accessibility drafts and
         explanations, which always pass through Human Review. Human Review
         branches into Accuracy, Privacy, Bias and Fairness, and Accessibility
         Expertise. GLOW workflows feed into Human Review and reach Campus
-        Partners, who go on to become Accessibility Champions. The center of
-        the map is human-centered accessibility capacity building, not the AI
-        model.
+        Partners, who become Accessibility Champions. The center of the map
+        is human-centered accessibility capacity building, not the AI model.
     }
-    AI[Artificial Intelligence] --> ML[Machine Learning]
-    ML --> DL[Deep Learning]
-    DL --> NN[Neural Networks]
-    NN --> LLM[Large Language Models]
-    LLM --> FM[Foundation Models]
-    FM --> GenAI[Generative AI]
-    GenAI --> Drafts[Accessibility Drafts and Explanations]
-    Drafts --> HumanReview[Human Review]
-    HumanReview --> Accuracy[Accuracy]
-    HumanReview --> Privacy[Privacy]
-    HumanReview --> Bias[Bias and Fairness]
-    HumanReview --> Access[Accessibility Expertise]
-    GLOW[GLOW Workflows] --> HumanReview
-    GLOW --> Partners[Campus Partners]
-    Partners --> Champions[Accessibility Champions]
+    AI["Artificial Intelligence\n(the broad field)"]
+    ML["Machine Learning\n(learns from data)"]
+    DL["Deep Learning\n(multi-layer networks)"]
+    NN["Neural Networks\n(e.g. transformers)"]
+    LLM["Large Language Models\n(e.g. Claude, GPT-4o)"]
+    FM["Foundation Models\n(broad pre-training)"]
+    GenAI["Generative AI\n(e.g. Claude.ai, ChatGPT)"]
+    Drafts["Accessibility Drafts\nand Explanations"]
+    HumanReview["Human Review\n(required checkpoint)"]
+    Accuracy["Accuracy"]
+    Privacy["Privacy"]
+    Bias["Bias and Fairness"]
+    Access["Accessibility Expertise"]
+    GLOW["GLOW Workflows\n(structured, teachable)"]
+    Partners["Campus Partners"]
+    Champions["Accessibility Champions"]
+
+    AI -->|includes| ML
+    ML -->|uses| DL
+    DL -->|uses| NN
+    NN -->|underlies| LLM
+    LLM -->|is trained as| FM
+    FM -->|enables| GenAI
+    GenAI -->|produces| Drafts
+    Drafts -->|require| HumanReview
+    HumanReview -->|checks| Accuracy
+    HumanReview -->|checks| Privacy
+    HumanReview -->|checks| Bias
+    HumanReview -->|applies| Access
+    GLOW -->|structures| HumanReview
+    GLOW -->|trains| Partners
+    Partners -->|become| Champions
