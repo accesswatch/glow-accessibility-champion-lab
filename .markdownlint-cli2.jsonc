@@ -1,0 +1,24 @@
+{
+  // Single source of truth for markdown linting, auto-discovered by
+  // markdownlint-cli2 both locally (Fix-Markdown-And-ExportHtml.ps1)
+  // and in the GitHub Markdown check workflow, so they always agree.
+  "config": {
+    "default": true,
+    // Long prose lines are fine; files wrap in editors and on GitHub.
+    "MD013": false,
+    // Inline HTML is allowed (tables, anchors, embedded markup).
+    "MD033": false,
+    // First line need not be a top-level heading (sidebar, fragments).
+    "MD041": false,
+    // Table pipe spacing is cosmetic; do not enforce a column style.
+    "MD060": false
+  },
+  "globs": ["**/*.md"],
+  // docs/ holds imported planning source documents (multiple H1s by
+  // design); they are reference material, not authored artifacts.
+  "ignores": [
+    "docs/**",
+    "node_modules/**",
+    ".git/**"
+  ]
+}

@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(git remote *)",
-      "Bash(gh api *)"
+      "Bash(gh api *)",
+      "Bash(cp -f wiki-source/*.md /s/glow-accessibility-champion-lab.wiki/)",
+      "Read(//s/glow-accessibility-champion-lab.wiki/**)"
     ]
   }
 }

@@ -15,11 +15,6 @@ jobs:
       - name: Run markdownlint
         uses: DavidAnson/markdownlint-cli2-action@v16
         with:
+          # Rules, globs, and ignores all come from .markdownlint-cli2.jsonc
+          # so this job matches the local lint exactly.
           globs: "**/*.md"
-          config: |
-            {
-              "default": true,
-              "MD013": false,
-              "MD033": false,
-              "MD041": false
-            }
