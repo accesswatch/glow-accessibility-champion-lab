@@ -9,3 +9,7 @@ private/
 .DS_Store
 Thumbs.db
 dist/
+
+# Generated HTML (pandoc twins built from Markdown by
+# tools/Fix-Markdown-And-ExportHtml.ps1). Build output, not source.
+*.html
