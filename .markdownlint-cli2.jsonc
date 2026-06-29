@@ -19,6 +19,10 @@
   "ignores": [
     "docs/**",
     "node_modules/**",
-    ".git/**"
+    ".git/**",
+    // Raw, verbatim AI tool outputs captured for the Module 2 comparison.
+    // They are evidence and must stay unedited, so they are not linted.
+    // The authored human-reviewed-output.md in the same folder is still linted.
+    "**/outputs/tool-*-output.md"
   ]
 }
