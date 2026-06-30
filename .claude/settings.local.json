@@ -4,7 +4,11 @@
       "Bash(git remote *)",
       "Bash(gh api *)",
       "Bash(cp -f wiki-source/*.md /s/glow-accessibility-champion-lab.wiki/)",
-      "Read(//s/glow-accessibility-champion-lab.wiki/**)"
+      "Read(//s/glow-accessibility-champion-lab.wiki/**)",
+      "Bash(git -C /tmp/cc-wiki checkout master)",
+      "Read(//tmp/**)",
+      "Bash(git -C /tmp/cc-wiki ls-tree master)",
+      "Bash(git *)"
     ]
   }
 }
